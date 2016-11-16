@@ -1,36 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single">>
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+        android:id="@+id/nav_tips"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Baking Tips" />
+    <item
+        android:id="@+id/nav_recipe"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Triple Choco Recipe" />
+    <item
+        android:id="@+id/nav_cupcakes"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Cupcakes" />
+    <item
+
+        android:id="@+id/nav_pcalculator"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Pricing Calculator" />
+    <item
+        android:id="@+id/nav_icalculator"
+        android:icon="@drawable/ic_menu_manage"
+        android:title="Ingredients Calculator" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
+    <item android:title="Eddie Bull Social">
+    <menu>
+        <item
+        android:id="@+id/nav_bakers"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Meet The Bakers" />
+        <item
+        android:id="@+id/nav_social"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Get Social" />
+        <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_menu_share"
+        android:title="About Us" />
+        <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/ic_menu_share"
+        android:title="Contact Us" />
+        <item
+        android:id="@+id/nav_faq"
+        android:icon="@drawable/ic_menu_share"
+        android:title="FAQ" />
+    </menu>
     </item>
 
 </menu>
