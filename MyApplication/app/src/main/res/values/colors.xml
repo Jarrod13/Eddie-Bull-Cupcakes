@@ -6,4 +6,5 @@
     <color name="backgroundColour">#ef64c8</color>
     <color name="buttonColour">#62401e</color>
     <color name="buttonTextColour">#ffffff</color>
+    <color name="navDrawerBackground">#efa8e9</color>
 </resources>
