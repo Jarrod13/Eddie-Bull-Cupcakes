@@ -5,4 +5,7 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="welcomeDescription">Welcome to The Eddie Bull Cupcakes App where you will find most delicious cupcakes</string>
+    <string name="phoneButton">Give us a call</string>
+    <string name="locationButton">View on map</string>
 </resources>
