@@ -7,11 +7,5 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.liamgoodwin.eddiebullcupcakes.MainActivity"
     tools:showIn="@layout/app_bar_main"
-<<<<<<< HEAD
     android:id="@+id/mainFrame">
-=======
-    android:orientation="vertical"
-    android:id="@+id/mainFrame">
-
->>>>>>> c76c6e203ff675f4ea49f3e4e05cc43a7c333c4d
 </LinearLayout>
