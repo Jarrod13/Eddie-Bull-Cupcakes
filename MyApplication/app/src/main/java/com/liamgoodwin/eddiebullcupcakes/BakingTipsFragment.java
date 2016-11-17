@@ -4,6 +4,9 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +29,9 @@ public class BakingTipsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private SectionPagerAdapter mSectionsPagerAdapter;
     private OnFragmentInteractionListener mListener;
+    private ViewPager mViewPager;
 
     public BakingTipsFragment() {
         // Required empty public constructor
@@ -63,8 +67,11 @@ public class BakingTipsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_baking_tips, container, false);
+        View view =  inflater.inflate(R.layout.fragment_baking_tips, container, false);
+        mSectionsPagerAdapter = new SectionPagerAdapter(getChildFragmentManager());
+        mViewPager = (ViewPager) view.findViewById(R.id.bakingTips);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -104,5 +111,45 @@ public class BakingTipsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+    public class SectionPagerAdapter extends FragmentPagerAdapter {
+        public SectionPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return BakingTipsDisplayFragment.newInstance("Use room temperature ingredients");
+                case 1:
+                    return BakingTipsDisplayFragment.newInstance("Invest in quality bakeware");
+                case 2:
+                    return BakingTipsDisplayFragment.newInstance("Butter and flour your pan generously");
+                case 3:
+                    return BakingTipsDisplayFragment.newInstance("Weigh ingredients");
+                case 4:
+                    return BakingTipsDisplayFragment.newInstance("Take your time to fully complete each step");
+                case 5:
+                    return BakingTipsDisplayFragment.newInstance("Always use salt");
+                case 6:
+                    return BakingTipsDisplayFragment.newInstance("Rotate halfway through");
+                case 7:
+                    return BakingTipsDisplayFragment.newInstance("Don't mess with the oven temperature and cooking time");
+                case 8:
+                    return BakingTipsDisplayFragment.newInstance("Let it cool completely");
+                case 9:
+                    return BakingTipsDisplayFragment.newInstance("Get an oven thermometer");
+                case 10:
+                    return BakingTipsDisplayFragment.newInstance("Chill your cookie dough");
+                case 11:
+                    return BakingTipsDisplayFragment.newInstance("Avoid using cold eggs");
+                default:
+                    return BakingTipsDisplayFragment.newInstance("Whoops");
+            }
+        }
+
+        public int getCount() {
+            return 12;
+        }
     }
 }

@@ -3,14 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.liamgoodwin.eddiebullcupcakes.BakingTipsDisplayFragment"
-    android:background="@color/backgroundColour">
+    android:background="@color/backgroundColour"
+    android:id="@+id/bakingTipsDisplay">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/factContent"
-        android:text="@string/hello_blank_fragment"
+        android:text=""
         android:gravity="center_vertical|center_horizontal"
         android:padding="10dp"
         android:textSize="25dp"

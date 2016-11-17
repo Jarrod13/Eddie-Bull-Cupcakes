@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_tips) {
             FragmentTransaction tran = fm.beginTransaction();
             //tran.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-            tran.replace(R.id.mainFrame, new BakingTipsDisplayFragment());
+            tran.replace(R.id.mainFrame, new BakingTipsFragment());
             tran.commit();
         }
 
