@@ -4,6 +4,9 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +30,8 @@ public class RecipeStepsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private SectionPagerAdapter mSectionsPagerAdapter;
+    private ViewPager mViewPager;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,11 +69,10 @@ public class RecipeStepsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_recipe_steps, container, false);
-        if(mParam1 != null && mParam2 != null) {
-            ((TextView) view.findViewById(R.id.stepNumber)).setText(mParam1);
-            ((TextView) view.findViewById(R.id.stepText)).setText(mParam2);
-        }
+        View view = inflater.inflate(R.layout.fragment_triple_choco_recipe, container, false);
+        mSectionsPagerAdapter = new SectionPagerAdapter(getChildFragmentManager());
+        mViewPager = (ViewPager) view.findViewById(R.id.recipecontent);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
         return view;
     }
 
@@ -109,5 +113,24 @@ public class RecipeStepsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public class SectionPagerAdapter extends FragmentPagerAdapter {
+        public SectionPagerAdapter(FragmentManager fm) { super(fm); }
+
+        public Fragment getItem(int position) {
+            switch(position) {
+                case 0: return TripleChocoRecipeFragment.newInstance("Step #1", "Preheat oven to 350.");
+                case 1: return TripleChocoRecipeFragment.newInstance("Step #2", "Whip butter until fluffy. Add sugars and continue to beat for about 2 minutes.");
+                case 2: return TripleChocoRecipeFragment.newInstance("Step #3", "Add eggs one at a time and beat until well-combined.");
+                case 3: return TripleChocoRecipeFragment.newInstance("Step #4", "Add in vanilla, buttermilk, sour cream, and coffee and stir slightly.");
+                case 4: return TripleChocoRecipeFragment.newInstance("Step #5", "Sift in flour, cocoa, baking soda, and salt a little at a time and stir just until combined. Don’t overmix.");
+                case 5: return TripleChocoRecipeFragment.newInstance("Step #6", "Scoop batter into prepared cupcake tin.");
+                case 6: return TripleChocoRecipeFragment.newInstance("Step #7", "Bake at 350 for 20 minutes or until toothpick comes out clean.");
+                default: return TripleChocoRecipeFragment.newInstance("No Step Available", "Please try again.");
+            }
+        }
+
+        public int getCount() { return 7; }
     }
 }

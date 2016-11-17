@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -29,9 +30,8 @@ public class TripleChocoRecipeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private SectionPagerAdapter mSectionsPagerAdapter;
+
     private OnFragmentInteractionListener mListener;
-    private ViewPager mViewPager;
 
     public TripleChocoRecipeFragment() {
         // Required empty public constructor
@@ -67,10 +67,11 @@ public class TripleChocoRecipeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_triple_choco_recipe, container, false);
-        mSectionsPagerAdapter = new SectionPagerAdapter(getChildFragmentManager());
-        mViewPager = (ViewPager) view.findViewById(R.id.recipecontent);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
+        View view = inflater.inflate(R.layout.fragment_triple_choco_recipe, container, false);
+        if(mParam1 != null && mParam2 != null) {
+            ((TextView) view.findViewById(R.id.stepNumber)).setText(mParam1);
+            ((TextView) view.findViewById(R.id.stepText)).setText(mParam2);
+        }
         return view;
     }
 
@@ -111,20 +112,5 @@ public class TripleChocoRecipeFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    public class SectionPagerAdapter extends FragmentPagerAdapter {
-            public SectionPagerAdapter(FragmentManager fm) { super(fm); }
-
-            public Fragment getItem(int position) {
-                switch(position) {
-                    case 0: return RecipeStepsFragment.newInstance("Step #1", "The first step is to gather all ingredients.");
-                    case 1: return RecipeStepsFragment.newInstance("Step #1", "The first step is to gather all ingredients.");
-                    case 2: return RecipeStepsFragment.newInstance("Step #1", "The first step is to gather all ingredients.");
-                    default: return RecipeStepsFragment.newInstance("No Step Available", "Please try again.");
-                }
-            }
-
-        public int getCount() { return 3; }
     }
 }
