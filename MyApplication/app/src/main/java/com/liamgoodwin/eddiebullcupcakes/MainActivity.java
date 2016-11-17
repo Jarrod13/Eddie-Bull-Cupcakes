@@ -20,7 +20,9 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
-        BakingTipsFragment.OnFragmentInteractionListener{
+        BakingTipsFragment.OnFragmentInteractionListener,
+        BakingTipsDisplayFragment.OnFragmentInteractionListener
+{
 
     FragmentManager fm = getSupportFragmentManager();
 
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_tips) {
             FragmentTransaction tran = fm.beginTransaction();
             //tran.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-            tran.replace(R.id.mainFrame, new BakingTipsFragment());
+            tran.replace(R.id.mainFrame, new BakingTipsDisplayFragment());
             tran.commit();
         }
 
