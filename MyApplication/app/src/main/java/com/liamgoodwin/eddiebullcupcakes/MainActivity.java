@@ -18,13 +18,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
+
         implements OnNavigationItemSelectedListener,
         MainFragment.OnFragmentInteractionListener,
         BakingTipsFragment.OnFragmentInteractionListener,
-        BakingTipsDisplayFragment.OnFragmentInteractionListener
-{
+        BakingTipsDisplayFragment.OnFragmentInteractionListener,
+        TripleChocoRecipeFragment.OnFragmentInteractionListener,
+        RecipeStepsFragment.OnFragmentInteractionListener {
 
-    FragmentManager fm = getSupportFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,16 +96,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+
         if (id == R.id.nav_tips) {
             FragmentTransaction tran = fm.beginTransaction();
             //tran.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
             tran.replace(R.id.mainFrame, new BakingTipsFragment());
             tran.commit();
         }
-
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
+        else if (id == R.id.nav_recipe) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new RecipeStepsFragment());
+            tran.commit();
+        } //else if (id == R.id.nav_gallery) {
 //
 //        } else if (id == R.id.nav_slideshow) {
 //
