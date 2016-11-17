@@ -1,8 +1,12 @@
 package com.liamgoodwin.eddiebullcupcakes;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,7 +18,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+
+        implements OnNavigationItemSelectedListener,
+        MainFragment.OnFragmentInteractionListener,
+        BakingTipsFragment.OnFragmentInteractionListener,
+        BakingTipsDisplayFragment.OnFragmentInteractionListener,
+        TripleChocoRecipeFragment.OnFragmentInteractionListener,
+        RecipeStepsFragment.OnFragmentInteractionListener {
+
+        FragmentManager fm = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +34,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        FragmentTransaction trans = fm.beginTransaction();
+        trans.replace(R.id.mainFrame, new MainFragment());
+        trans.commit();
 
         /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -81,9 +96,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
+
+        if (id == R.id.nav_tips) {
+            FragmentTransaction tran = fm.beginTransaction();
+            //tran.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
+            tran.replace(R.id.mainFrame, new BakingTipsFragment());
+            tran.commit();
+        }
+        else if (id == R.id.nav_recipe) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new RecipeStepsFragment());
+            tran.commit();
+        } //else if (id == R.id.nav_gallery) {
 //
 //        } else if (id == R.id.nav_slideshow) {
 //
@@ -99,4 +123,10 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
+

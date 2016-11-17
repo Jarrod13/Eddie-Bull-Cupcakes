@@ -8,4 +8,7 @@
     <string name="welcomeDescription">Welcome to The Eddie Bull Cupcakes App where you will find most delicious cupcakes</string>
     <string name="phoneButton">Give us a call</string>
     <string name="locationButton">View on map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
