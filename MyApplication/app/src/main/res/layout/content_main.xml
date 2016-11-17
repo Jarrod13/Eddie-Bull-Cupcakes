@@ -12,7 +12,8 @@
     tools:context="com.liamgoodwin.eddiebullcupcakes.MainActivity"
     tools:showIn="@layout/app_bar_main"
     android:background="@color/backgroundColour"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/mainFrame">
 
     <ImageView
         android:layout_width="match_parent"
