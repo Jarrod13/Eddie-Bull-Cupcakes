@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity
         BakingTipsFragment.OnFragmentInteractionListener,
         BakingTipsDisplayFragment.OnFragmentInteractionListener,
         TripleChocoRecipeFragment.OnFragmentInteractionListener,
-        RecipeStepsFragment.OnFragmentInteractionListener {
+        RecipeStepsFragment.OnFragmentInteractionListener,
+        AboutUsFragment.OnFragmentInteractionListener {
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -107,17 +108,12 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction tran = fm.beginTransaction();
             tran.replace(R.id.mainFrame, new RecipeStepsFragment());
             tran.commit();
-        } //else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
+        }
+        else if (id == R.id.nav_about) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new AboutUsFragment());
+            tran.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
