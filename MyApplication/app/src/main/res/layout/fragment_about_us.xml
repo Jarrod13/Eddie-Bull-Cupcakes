@@ -8,7 +8,8 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.liamgoodwin.whitecollarapp.ContactFragment">
+        tools:context="com.liamgoodwin.whitecollarapp.ContactFragment"
+        android:background="@color/backgroundColour">
 
         <TextView
             android:layout_width="wrap_content"
@@ -17,10 +18,13 @@
             android:id="@+id/contactName"
             android:layout_gravity="left|top"
             android:gravity="center"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
             android:text="@string/aboutUs"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="match_parent"
@@ -29,7 +33,9 @@
             android:id="@+id/callNow"
             android:layout_gravity="right|bottom"
             android:layout_above="@+id/openMap"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/backgroundColour"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp" />
 
         <Button
             android:layout_width="match_parent"
@@ -39,7 +45,9 @@
             android:layout_gravity="right|center_vertical"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/backgroundColour"
+            android:background="@color/colorPrimary"
+            android:layout_marginBottom="10dp" />
 
         <TextView
             android:layout_width="fill_parent"
@@ -49,9 +57,10 @@
             android:id="@+id/textView9"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:textSize="30dp"
+            android:textSize="40dp"
             android:textAlignment="center"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:padding="20dp" />
 
     </RelativeLayout>
 
