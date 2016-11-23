@@ -19,7 +19,8 @@
             android:gravity="center"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="150dp"
-            android:text="@string/aboutUs" />
+            android:text="@string/aboutUs"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:layout_width="match_parent"
@@ -27,7 +28,8 @@
             android:text="Call Us Now"
             android:id="@+id/callNow"
             android:layout_gravity="right|bottom"
-            android:layout_above="@+id/openMap"/>
+            android:layout_above="@+id/openMap"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:layout_width="match_parent"
@@ -36,10 +38,11 @@
             android:id="@+id/openMap"
             android:layout_gravity="right|center_vertical"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="@color/colorPrimary" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="About Us"
@@ -47,7 +50,8 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textSize="30dp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary" />
 
     </RelativeLayout>
 
