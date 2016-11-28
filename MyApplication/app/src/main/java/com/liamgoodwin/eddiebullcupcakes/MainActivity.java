@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity
         BakingTipsDisplayFragment.OnFragmentInteractionListener,
         TripleChocoRecipeFragment.OnFragmentInteractionListener,
         RecipeStepsFragment.OnFragmentInteractionListener,
-        AboutUsFragment.OnFragmentInteractionListener {
+        AboutUsFragment.OnFragmentInteractionListener,
+        CupcakesFragment.OnFragmentInteractionListener {
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -112,6 +113,10 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_about) {
             FragmentTransaction tran = fm.beginTransaction();
             tran.replace(R.id.mainFrame, new AboutUsFragment());
+            tran.commit();
+        } else if (id == R.id.nav_cupcakes) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new CupcakesFragment());
             tran.commit();
         }
 
