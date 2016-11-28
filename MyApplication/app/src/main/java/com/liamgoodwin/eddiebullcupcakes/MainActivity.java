@@ -25,7 +25,9 @@ public class MainActivity extends AppCompatActivity
         BakingTipsDisplayFragment.OnFragmentInteractionListener,
         TripleChocoRecipeFragment.OnFragmentInteractionListener,
         RecipeStepsFragment.OnFragmentInteractionListener,
-        AboutUsFragment.OnFragmentInteractionListener {
+        AboutUsFragment.OnFragmentInteractionListener,
+        FAQFragment.OnFragmentInteractionListener,
+        FAQDisplayFragment.OnFragmentInteractionListener {
 
         FragmentManager fm = getSupportFragmentManager();
 
