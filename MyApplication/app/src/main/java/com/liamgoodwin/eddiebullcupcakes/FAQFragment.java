@@ -3,23 +3,24 @@ package com.liamgoodwin.eddiebullcupcakes;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.renderscript.Element;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.R.id.list;
 
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link BakingTipsFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link BakingTipsFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FAQFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,9 +30,9 @@ public class FAQFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private SectionPagerAdapter mSectionsPagerAdapter;
+    TextView faqTextView;
+    ListView list;
     private OnFragmentInteractionListener mListener;
-    private ViewPager mViewPager;
 
     public FAQFragment() {
         // Required empty public constructor
@@ -43,11 +44,11 @@ public class FAQFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BakingTipsFragment.
+     * @return A new instance of fragment DataTypeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BakingTipsFragment newInstance(String param1, String param2) {
-        BakingTipsFragment fragment = new BakingTipsFragment();
+    public static FAQFragment newInstance(String param1, String param2) {
+        FAQFragment fragment = new FAQFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,10 +68,28 @@ public class FAQFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_baking_tips, container, false);
-        mSectionsPagerAdapter = new SectionPagerAdapter(getChildFragmentManager());
-        mViewPager = (ViewPager) view.findViewById(R.id.bakingTips);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
+        View view = inflater.inflate(R.layout.fragment_faq, container, false);
+        faqTextView = (TextView) view.findViewById(R.id.faqDescription);
+
+        list = (ListView) view.findViewById(R.id.faqList);
+        ArrayList<FAQItem> faqList = new ArrayList<FAQItem>();
+        faqList.add(new FAQItem("String", "Stores text"));
+        faqList.add(new FAQItem("char", "Stores character"));
+        faqList.add(new FAQItem("Boolean", "Stores true or false"));
+        faqList.add(new FAQItem("Int", "Stores number"));
+        faqList.add(new FAQItem("double", "Stores number with decimal"));
+        faqList.add(new FAQItem("object", "Stores object"));
+
+        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, faqList);
+        list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FAQItem item = (FAQItem) list.getItemAtPosition(position);
+                faqTextView.setText(item.getDescription());
+            }
+        });
         return view;
     }
 
@@ -111,45 +130,5 @@ public class FAQFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-    public class SectionPagerAdapter extends FragmentPagerAdapter {
-        public SectionPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return BakingTipsDisplayFragment.newInstance("Use room temperature ingredients");
-                case 1:
-                    return BakingTipsDisplayFragment.newInstance("Invest in quality bakeware");
-                case 2:
-                    return BakingTipsDisplayFragment.newInstance("Butter and flour your pan generously");
-                case 3:
-                    return BakingTipsDisplayFragment.newInstance("Weigh ingredients");
-                case 4:
-                    return BakingTipsDisplayFragment.newInstance("Take your time to fully complete each step");
-                case 5:
-                    return BakingTipsDisplayFragment.newInstance("Always use salt");
-                case 6:
-                    return BakingTipsDisplayFragment.newInstance("Rotate halfway through");
-                case 7:
-                    return BakingTipsDisplayFragment.newInstance("Don't mess with the oven temperature and cooking time");
-                case 8:
-                    return BakingTipsDisplayFragment.newInstance("Let it cool completely");
-                case 9:
-                    return BakingTipsDisplayFragment.newInstance("Get an oven thermometer");
-                case 10:
-                    return BakingTipsDisplayFragment.newInstance("Chill your cookie dough");
-                case 11:
-                    return BakingTipsDisplayFragment.newInstance("Avoid using cold eggs");
-                default:
-                    return BakingTipsDisplayFragment.newInstance("Whoops");
-            }
-        }
-
-        public int getCount() {
-            return 12;
-        }
     }
 }
