@@ -22,6 +22,8 @@ import android.widget.EditText;
  */
 public class IngredientsCalculatorFragment extends Fragment {
 
+    private View myFragmentView;
+
     EditText flour;
     EditText bakingPowder;
     EditText bakingSoda;
@@ -35,9 +37,16 @@ public class IngredientsCalculatorFragment extends Fragment {
 
     SeekBar seekBar;
 
-    private double interest = 0.15;
-    private double loanAmount = 0.0;
-    private int years = 10;
+    private double flourAmount = 1.5;
+    private double bakingPowderAmount = 1.5;
+    private double bakingSodaAmount = .5;
+    private double saltAmount = .25;
+    private double sugarAmount = 1;
+    private double cocoaAmount = .75;
+    private double vegetableOilAmount = .75;
+    private double eggsAmount = 2;
+    private double vanillaExtractAmount = 1;
+    private double milkAmount = 1;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -74,17 +83,38 @@ public class IngredientsCalculatorFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        flour = (EditText) myFragmentView.findViewById(R.id.flourEditText);
+        bakingPowder = (EditText) myFragmentView.findViewById(R.id.bakingPowderEditText);
+        bakingSoda = (EditText) myFragmentView.findViewById(R.id.bakingSodaEditText);
+        salt = (EditText) myFragmentView.findViewById(R.id.saltEditText);
+        sugar = (EditText) myFragmentView.findViewById(R.id.sugarEditText);
+        cocoa = (EditText) myFragmentView.findViewById(R.id.cocoaEditText);
+        vegetableOil = (EditText) myFragmentView.findViewById(R.id.vegetableOilEditText);
+        eggs = (EditText) myFragmentView.findViewById(R.id.eggsEditText);
+        vanillaExtract = (EditText) myFragmentView.findViewById(R.id.vanillaExtractEditText);
+        milk = (EditText) myFragmentView.findViewById(R.id.milkEditText);
+
+        seekBar = (SeekBar) myFragmentView.findViewById(R.id.sb);
+
+        flour.setText(flourAmount + "");
+        bakingPowder.setText(bakingPowderAmount + "");
+        bakingSoda.setText(bakingSodaAmount + "");
+        salt.setText(saltAmount + "");
+        sugar.setText(sugarAmount + "");
+        cocoa.setText(cocoaAmount + "");
+        vegetableOil.setText(vegetableOilAmount + "");
+        eggs.setText(eggsAmount + "");
+        vanillaExtract.setText(vanillaExtractAmount + "");
+        milk.setText(milkAmount + "");
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        myFragmentView = inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
+
+        return myFragmentView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
