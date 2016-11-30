@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
-        android:layout_margin="10dp" />
+        android:layout_margin="20dp" />
 
     <SeekBar
         android:layout_width="200dp"
@@ -379,9 +379,8 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="1 batch(s)"
         android:id="@+id/batchesTextView"
-        android:layout_below="@+id/title"
-        android:layout_alignRight="@+id/textView7"
-        android:layout_alignEnd="@+id/textView7"
-        android:layout_marginRight="40dp" />
+        android:layout_alignTop="@+id/sb"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
 
 </RelativeLayout>
