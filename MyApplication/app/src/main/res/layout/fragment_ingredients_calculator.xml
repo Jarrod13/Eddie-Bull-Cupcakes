@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Flour"
-        android:id="@+id/FlourTextView"
+        android:id="@+id/flourTextView"
         android:layout_below="@+id/seekBar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false" />
@@ -39,8 +39,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Baking Powder"
-        android:id="@+id/BakingPowderTextView"
-        android:layout_below="@+id/FlourTextView"
+        android:id="@+id/bakingPowderTextView"
+        android:layout_below="@+id/flourTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -49,8 +49,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Baking Soda"
-        android:id="@+id/BakingSodaTextView"
-        android:layout_below="@+id/BakingPowderTextView"
+        android:id="@+id/bakingSodaTextView"
+        android:layout_below="@+id/bakingPowderTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -60,7 +60,67 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Salt"
         android:id="@+id/saltTextView"
-        android:layout_below="@+id/BakingSodaTextView"
+        android:layout_below="@+id/bakingSodaTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Sugar"
+        android:id="@+id/sugarTextView"
+        android:layout_below="@+id/saltTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cocoa"
+        android:id="@+id/cocoaTextView"
+        android:layout_below="@+id/sugarTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vegetable Oil"
+        android:id="@+id/vegetableOilTextView"
+        android:layout_below="@+id/cocoaTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Eggs"
+        android:id="@+id/eggsTextView"
+        android:layout_below="@+id/vegetableOilTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vanilla Extract"
+        android:id="@+id/vanillaExtractTextView"
+        android:layout_below="@+id/eggsTextView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Milk"
+        android:id="@+id/milkTextView"
+        android:layout_below="@+id/vanillaExtractTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
