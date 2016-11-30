@@ -24,7 +24,6 @@
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:scrollbarSize="5"
         android:max="5"
         android:progress="1"
         android:indeterminate="false" />
@@ -151,99 +150,124 @@
         android:layout_marginLeft="10dp"
         android:layout_margin="10dp" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/flourEditText"
         android:layout_alignBottom="@+id/flourTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp" />
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/bakingPowderEditText"
-        android:layout_below="@+id/flourEditText"
+        android:textSize="20dp"
+        android:layout_alignTop="@+id/textView"
         android:layout_alignLeft="@+id/bakingSodaEditText"
         android:layout_alignStart="@+id/bakingSodaEditText"
-        android:layout_marginRight="50dp" />
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/bakingSodaEditText"
         android:layout_alignBottom="@+id/bakingSodaTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp" />
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/saltEditText"
-        android:layout_below="@+id/bakingSodaEditText"
-        android:layout_alignLeft="@+id/bakingSodaEditText"
-        android:layout_alignStart="@+id/bakingSodaEditText"
-        android:layout_marginRight="50dp" />
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignLeft="@+id/sugarEditText"
+        android:layout_alignStart="@+id/sugarEditText"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/sugarEditText"
-        android:layout_below="@+id/saltEditText"
+        android:layout_alignBottom="@+id/sugarTextView"
         android:layout_alignLeft="@+id/cocoaEditText"
         android:layout_alignStart="@+id/cocoaEditText"
-        android:layout_marginRight="50dp" />
+        android:textSize="20dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/cocoaEditText"
         android:layout_alignBottom="@+id/cocoaTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp" />
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/vegetableOilEditText"
         android:layout_alignBottom="@+id/vegetableOilTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentEnd="false"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp" />
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/eggsEditText"
-        android:layout_below="@+id/vegetableOilEditText"
+        android:layout_alignBottom="@+id/eggsTextView"
         android:layout_alignLeft="@+id/vegetableOilEditText"
         android:layout_alignStart="@+id/vegetableOilEditText"
-        android:layout_marginRight="50dp" />
+        android:textSize="20dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/vanillaExtractEditText"
-        android:layout_above="@+id/milkEditText"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/textView8"
         android:layout_alignLeft="@+id/eggsEditText"
         android:layout_alignStart="@+id/eggsEditText"
-        android:layout_marginRight="50dp" />
+        android:textStyle="bold" />
 
-    <EditText
+    <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/milkEditText"
         android:layout_alignBottom="@+id/milkTextView"
         android:layout_alignLeft="@+id/vanillaExtractEditText"
         android:layout_alignStart="@+id/vanillaExtractEditText"
-        android:layout_marginRight="50dp" />
+        android:layout_marginRight="50dp"
+        android:textSize="20dp"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -251,10 +275,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/cupsTextView"
-        android:layout_below="@+id/sb"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignParentEnd="false"
+        android:layout_alignBottom="@+id/flourEditText"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -262,10 +286,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="tspn(s)"
         android:id="@+id/textView"
-        android:layout_below="@+id/flourTextView"
-        android:layout_alignRight="@+id/cupsTextView"
-        android:layout_alignEnd="@+id/cupsTextView"
-        android:layout_marginRight="0dp" />
+        android:layout_alignBottom="@+id/bakingPowderTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -273,10 +296,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="tspn(s)"
         android:id="@+id/textView2"
-        android:layout_below="@+id/bakingPowderTextView"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginRight="0dp" />
+        android:layout_alignBottom="@+id/bakingSodaEditText"
+        android:layout_alignRight="@+id/cupsTextView"
+        android:layout_alignEnd="@+id/cupsTextView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -284,10 +308,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="tspn(s)"
         android:id="@+id/textView3"
-        android:layout_below="@+id/bakingSodaTextView"
+        android:layout_alignBottom="@+id/saltTextView"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -295,10 +318,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/textView4"
-        android:layout_below="@+id/saltTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignBottom="@+id/sugarEditText"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -306,10 +330,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/textView5"
-        android:layout_below="@+id/sugarTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignBottom="@+id/cocoaTextView"
+        android:layout_alignLeft="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -317,10 +342,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/textView6"
-        android:layout_below="@+id/cocoaTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignBottom="@+id/vegetableOilEditText"
+        android:layout_alignRight="@+id/textView8"
+        android:layout_alignEnd="@+id/textView8"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -328,10 +354,11 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/textView7"
-        android:layout_below="@+id/vanillaExtractTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignTop="@+id/milkEditText"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -339,8 +366,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="tspn(s)"
         android:id="@+id/textView8"
-        android:layout_below="@+id/eggsTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="5dp" />
+        android:layout_alignTop="@+id/vanillaExtractTextView"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_alignBottom="@+id/vanillaExtractTextView"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false" />
 </RelativeLayout>

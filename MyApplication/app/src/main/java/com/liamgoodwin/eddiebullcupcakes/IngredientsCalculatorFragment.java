@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
@@ -24,16 +25,16 @@ public class IngredientsCalculatorFragment extends Fragment {
 
     private View myFragmentView;
 
-    EditText flour;
-    EditText bakingPowder;
-    EditText bakingSoda;
-    EditText salt;
-    EditText sugar;
-    EditText cocoa;
-    EditText vegetableOil;
-    EditText eggs;
-    EditText vanillaExtract;
-    EditText milk;
+    TextView flour;
+    TextView bakingPowder;
+    TextView bakingSoda;
+    TextView salt;
+    TextView sugar;
+    TextView cocoa;
+    TextView vegetableOil;
+    TextView eggs;
+    TextView vanillaExtract;
+    TextView milk;
 
     SeekBar seekBar;
 
@@ -83,16 +84,23 @@ public class IngredientsCalculatorFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        flour = (EditText) myFragmentView.findViewById(R.id.flourEditText);
-        bakingPowder = (EditText) myFragmentView.findViewById(R.id.bakingPowderEditText);
-        bakingSoda = (EditText) myFragmentView.findViewById(R.id.bakingSodaEditText);
-        salt = (EditText) myFragmentView.findViewById(R.id.saltEditText);
-        sugar = (EditText) myFragmentView.findViewById(R.id.sugarEditText);
-        cocoa = (EditText) myFragmentView.findViewById(R.id.cocoaEditText);
-        vegetableOil = (EditText) myFragmentView.findViewById(R.id.vegetableOilEditText);
-        eggs = (EditText) myFragmentView.findViewById(R.id.eggsEditText);
-        vanillaExtract = (EditText) myFragmentView.findViewById(R.id.vanillaExtractEditText);
-        milk = (EditText) myFragmentView.findViewById(R.id.milkEditText);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+    {
+        myFragmentView = inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
+
+        flour = (TextView) myFragmentView.findViewById(R.id.flourEditText);
+        bakingPowder = (TextView) myFragmentView.findViewById(R.id.bakingPowderEditText);
+        bakingSoda = (TextView) myFragmentView.findViewById(R.id.bakingSodaEditText);
+        salt = (TextView) myFragmentView.findViewById(R.id.saltEditText);
+        sugar = (TextView) myFragmentView.findViewById(R.id.sugarEditText);
+        cocoa = (TextView) myFragmentView.findViewById(R.id.cocoaEditText);
+        vegetableOil = (TextView) myFragmentView.findViewById(R.id.vegetableOilEditText);
+        eggs = (TextView) myFragmentView.findViewById(R.id.eggsEditText);
+        vanillaExtract = (TextView) myFragmentView.findViewById(R.id.vanillaExtractEditText);
+        milk = (TextView) myFragmentView.findViewById(R.id.milkEditText);
 
         seekBar = (SeekBar) myFragmentView.findViewById(R.id.sb);
 
@@ -107,14 +115,8 @@ public class IngredientsCalculatorFragment extends Fragment {
         vanillaExtract.setText(vanillaExtractAmount + "");
         milk.setText(milkAmount + "");
 
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
-        myFragmentView = inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
-
         return myFragmentView;
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -156,10 +158,30 @@ public class IngredientsCalculatorFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    private final SeekBar.OnSeekBarChangeListener sbListener = new SeekBar.OnSeekBarChangeListener() {
+    private final SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            flourAmount = 1.5 * progress;
+            bakingPowderAmount = 1.5 * progress;
+            bakingSodaAmount = .5 * progress;
+            saltAmount = .25 * progress;
+            sugarAmount = 1 * progress;
+            cocoaAmount = .75 * progress;
+            vegetableOilAmount = .75 * progress;
+            eggsAmount = 2 * progress;
+            vanillaExtractAmount = 1 * progress;
+            milkAmount = 1 * progress;
 
+            flour.setText(flourAmount + "");
+            bakingPowder.setText(bakingPowderAmount + "");
+            bakingSoda.setText(bakingSodaAmount + "");
+            salt.setText(saltAmount + "");
+            sugar.setText(sugarAmount + "");
+            cocoa.setText(cocoaAmount + "");
+            vegetableOil.setText(vegetableOilAmount + "");
+            eggs.setText(eggsAmount + "");
+            vanillaExtract.setText(vanillaExtractAmount + "");
+            milk.setText(milkAmount + "");
         }
 
         @Override
