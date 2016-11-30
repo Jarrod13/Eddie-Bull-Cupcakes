@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.EditText;
 
 
 /**
@@ -16,8 +18,27 @@ import android.view.ViewGroup;
  * to handle interaction events.
  * Use the {@link IngredientsCalculatorFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
 public class IngredientsCalculatorFragment extends Fragment {
+
+    EditText flour;
+    EditText bakingPowder;
+    EditText bakingSoda;
+    EditText salt;
+    EditText sugar;
+    EditText cocoa;
+    EditText vegetableOil;
+    EditText eggs;
+    EditText vanillaExtract;
+    EditText milk;
+
+    SeekBar seekBar;
+
+    private double interest = 0.15;
+    private double loanAmount = 0.0;
+    private int years = 10;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,10 +49,6 @@ public class IngredientsCalculatorFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-
-    public IngredientsCalculatorFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -49,6 +66,9 @@ public class IngredientsCalculatorFragment extends Fragment {
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
+    }
+    public IngredientsCalculatorFragment() {
+        // Required empty public constructor
     }
 
     @Override
@@ -96,7 +116,7 @@ public class IngredientsCalculatorFragment extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
+     * <p>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
@@ -105,4 +125,23 @@ public class IngredientsCalculatorFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+    private final SeekBar.OnSeekBarChangeListener sbListener = new SeekBar.OnSeekBarChangeListener() {
+        @Override
+        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+        }
+
+        @Override
+        public void onStartTrackingTouch(SeekBar seekBar)
+        {
+
+        }
+
+        @Override
+        public void onStopTrackingTouch(SeekBar seekBar) {
+
+        }
+    };
+
 }

@@ -20,10 +20,14 @@
     <SeekBar
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:id="@+id/seekBar"
+        android:id="@+id/sb"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp" />
+        android:layout_margin="10dp"
+        android:scrollbarSize="5"
+        android:max="5"
+        android:progress="1"
+        android:indeterminate="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,7 +35,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Flour"
         android:id="@+id/flourTextView"
-        android:layout_below="@+id/seekBar"
+        android:layout_below="@+id/sb"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         android:layout_marginTop="20dp"
@@ -247,7 +251,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="cup(s)"
         android:id="@+id/cupsTextView"
-        android:layout_below="@+id/seekBar"
+        android:layout_below="@+id/sb"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="5dp" />
