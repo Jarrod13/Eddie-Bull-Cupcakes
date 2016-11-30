@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.SeekBar;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -104,6 +105,49 @@ public class IngredientsCalculatorFragment extends Fragment {
 
         seekBar = (SeekBar) myFragmentView.findViewById(R.id.sb);
 
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress,boolean fromUser) {
+                // TODO Auto-generated method stub
+
+                progress = progress + 1;
+
+                flourAmount = 1.5 * progress;
+                bakingPowderAmount = 1.5 * progress;
+                bakingSodaAmount = .5 * progress;
+                saltAmount = .25 * progress;
+                sugarAmount = 1 * progress;
+                cocoaAmount = .75 * progress;
+                vegetableOilAmount = .75 * progress;
+                eggsAmount = 2 * progress;
+                vanillaExtractAmount = 1 * progress;
+                milkAmount = 1 * progress;
+
+                flour.setText(flourAmount + "");
+                bakingPowder.setText(bakingPowderAmount + "");
+                bakingSoda.setText(bakingSodaAmount + "");
+                salt.setText(saltAmount + "");
+                sugar.setText(sugarAmount + "");
+                cocoa.setText(cocoaAmount + "");
+                vegetableOil.setText(vegetableOilAmount + "");
+                eggs.setText(eggsAmount + "");
+                vanillaExtract.setText(vanillaExtractAmount + "");
+                milk.setText(milkAmount + "");
+
+            }
+        });
+
         flour.setText(flourAmount + "");
         bakingPowder.setText(bakingPowderAmount + "");
         bakingSoda.setText(bakingSodaAmount + "");
@@ -161,27 +205,7 @@ public class IngredientsCalculatorFragment extends Fragment {
     private final SeekBar.OnSeekBarChangeListener seekBarListener = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            flourAmount = 1.5 * progress;
-            bakingPowderAmount = 1.5 * progress;
-            bakingSodaAmount = .5 * progress;
-            saltAmount = .25 * progress;
-            sugarAmount = 1 * progress;
-            cocoaAmount = .75 * progress;
-            vegetableOilAmount = .75 * progress;
-            eggsAmount = 2 * progress;
-            vanillaExtractAmount = 1 * progress;
-            milkAmount = 1 * progress;
 
-            flour.setText(flourAmount + "");
-            bakingPowder.setText(bakingPowderAmount + "");
-            bakingSoda.setText(bakingSodaAmount + "");
-            salt.setText(saltAmount + "");
-            sugar.setText(sugarAmount + "");
-            cocoa.setText(cocoaAmount + "");
-            vegetableOil.setText(vegetableOilAmount + "");
-            eggs.setText(eggsAmount + "");
-            vanillaExtract.setText(vanillaExtractAmount + "");
-            milk.setText(milkAmount + "");
         }
 
         @Override
