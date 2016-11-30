@@ -26,6 +26,7 @@ public class IngredientsCalculatorFragment extends Fragment {
 
     private View myFragmentView;
 
+    TextView batches;
     TextView flour;
     TextView bakingPowder;
     TextView bakingSoda;
@@ -92,6 +93,7 @@ public class IngredientsCalculatorFragment extends Fragment {
     {
         myFragmentView = inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
 
+        batches = (TextView) myFragmentView.findViewById(R.id.batchesTextView);
         flour = (TextView) myFragmentView.findViewById(R.id.flourEditText);
         bakingPowder = (TextView) myFragmentView.findViewById(R.id.bakingPowderEditText);
         bakingSoda = (TextView) myFragmentView.findViewById(R.id.bakingSodaEditText);
@@ -134,6 +136,7 @@ public class IngredientsCalculatorFragment extends Fragment {
                 vanillaExtractAmount = 1 * progress;
                 milkAmount = 1 * progress;
 
+                batches.setText(progress + " batch(s)");
                 flour.setText(flourAmount + "");
                 bakingPowder.setText(bakingPowderAmount + "");
                 bakingSoda.setText(bakingSodaAmount + "");
@@ -148,6 +151,7 @@ public class IngredientsCalculatorFragment extends Fragment {
             }
         });
 
+        batches.setText("1 batch(s)");
         flour.setText(flourAmount + "");
         bakingPowder.setText(bakingPowderAmount + "");
         bakingSoda.setText(bakingSodaAmount + "");
