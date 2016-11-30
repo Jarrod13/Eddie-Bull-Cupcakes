@@ -147,7 +147,8 @@
         android:layout_alignLeft="@+id/vanillaExtractTextView"
         android:layout_alignStart="@+id/vanillaExtractTextView"
         android:layout_margin="10dp"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="150dp"
@@ -353,9 +354,9 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/cupsText"
         android:id="@+id/textView7"
-        android:layout_below="@+id/milkEditText"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
+        android:layout_alignBottom="@+id/milkEditText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -364,8 +365,8 @@
         android:text="@string/tspnsText"
         android:id="@+id/textView8"
         android:layout_alignBottom="@+id/vanillaExtractTextView"
-        android:layout_alignLeft="@+id/textView7"
-        android:layout_alignStart="@+id/textView7" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
