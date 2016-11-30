@@ -29,7 +29,7 @@ class CupcakeAdapter extends ArrayAdapter<CupcakesFragment.CupcakeItem> {
         ImageView image = (ImageView) customView.findViewById(R.id.cupcakeImage);
 
         nameText.setText(singleCupcake.getName());
-        image.setImageResource(R.drawable.cupcake2);
+        image.setImageResource(R.drawable.cupcake1);
         return customView;
     }
 }

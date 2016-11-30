@@ -27,7 +27,7 @@ public class CupcakesFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private TextView CupcakeDescription;
+    private TextView CupcakeDescriptionTextView;
     private ListView list;
 
     // TODO: Rename and change types of parameters
@@ -74,7 +74,8 @@ public class CupcakesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cupcakes, container, false);
         String[] cupcakes = {"Rainbow Sprinkle", "Triple Choco", "Pumpkin Spice", "Peanut Butter Cup", "Funfetti Explosion"};
 
-        CupcakeDescription = (TextView) view.findViewById(R.id.CupcakeDescription);
+        CupcakeDescriptionTextView = (TextView) view.findViewById(R.id.CupcakeDescription);
+
         list = (ListView) view.findViewById(R.id.cupcakelist);
 
         ArrayList<CupcakeItem> cupcakelist = new ArrayList<CupcakeItem>();
@@ -86,22 +87,15 @@ public class CupcakesFragment extends Fragment {
         cupcakelist.add(new CupcakeItem("Funfetti Explosion", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
 
         CupcakeAdapter adapter1 = new CupcakeAdapter(getContext(), cupcakelist);
+
         list.setAdapter(adapter1);
+
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                System.out.println("Hello World");
+                CupcakeDescriptionTextView.setText(((CupcakeItem)list.getItemAtPosition(position)).getDescription());
             }
         });
-
-//        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                System.out.println("Button clicked");
-//                CupcakeDescription.setText(((CupcakeItem) list.getItemAtPosition(position)).getDescription());
-//
-//            }
-//        });
 
         return view;
     }
