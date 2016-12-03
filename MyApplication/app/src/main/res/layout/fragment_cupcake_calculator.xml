@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liamgoodwin.eddiebullcupcakes.CupcakeCalculatorFragment"
+    android:background="@color/backgroundColour">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pricing Calculator"
+        android:id="@+id/textView10"
+        android:textAlignment="center"
+        android:textColor="@color/buttonColour"
+        android:textSize="30dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rainbow Sprinkle    x"
+        android:id="@+id/textView11"
+        android:textColor="@color/buttonColour"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Triple Choco            x"
+        android:id="@+id/textView12"
+        android:textColor="@color/buttonColour"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Pumpkin Spice        x"
+        android:id="@+id/textView13"
+        android:textColor="@color/buttonColour"
+        android:layout_below="@+id/textView12"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Peanut Butter Cup  x"
+        android:id="@+id/textView14"
+        android:textColor="@color/buttonColour"
+        android:layout_below="@+id/textView13"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="viewEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Funfetti Explosion  x"
+        android:id="@+id/textView15"
+        android:textColor="@color/buttonColour"
+        android:layout_below="@+id/textView14"
+        android:layout_alignParentLeft="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textAlignment="viewEnd" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/buttonColour"
+        android:textAlignment="center"
+        android:text="1"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_toEndOf="@+id/textView14"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText2"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/buttonColour"
+        android:textAlignment="center"
+        android:text="1"
+        android:layout_below="@+id/editText"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_marginLeft="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText3"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/buttonColour"
+        android:textAlignment="center"
+        android:text="1"
+        android:layout_below="@+id/editText2"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_marginLeft="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText4"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/buttonColour"
+        android:textAlignment="center"
+        android:text="1"
+        android:layout_below="@+id/editText3"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_marginLeft="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText5"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/buttonColour"
+        android:textAlignment="center"
+        android:text="1"
+        android:layout_below="@+id/editText4"
+        android:layout_toRightOf="@+id/textView14"
+        android:layout_marginLeft="23dp" />
+</RelativeLayout>

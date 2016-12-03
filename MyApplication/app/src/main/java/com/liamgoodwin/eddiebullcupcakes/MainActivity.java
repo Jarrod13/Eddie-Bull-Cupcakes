@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity
         AboutUsFragment.OnFragmentInteractionListener,
         FAQFragment.OnFragmentInteractionListener, 
         CupcakesFragment.OnFragmentInteractionListener,
-        IngredientsCalculatorFragment.OnFragmentInteractionListener {
+        IngredientsCalculatorFragment.OnFragmentInteractionListener,
+        CupcakeCalculatorFragment.OnFragmentInteractionListener {
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -127,6 +128,11 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_icalculator) {
             FragmentTransaction tran = fm.beginTransaction();
             tran.replace(R.id.mainFrame, new IngredientsCalculatorFragment());
+            tran.commit();
+        }
+        else if (id == R.id.nav_pcalculator) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
             tran.commit();
         }
 
