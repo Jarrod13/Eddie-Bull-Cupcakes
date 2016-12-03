@@ -80,11 +80,11 @@ public class CupcakesFragment extends Fragment {
 
         ArrayList<CupcakeItem> cupcakelist = new ArrayList<CupcakeItem>();
 
-        cupcakelist.add(new CupcakeItem("Rainbow Sprinkle", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
-        cupcakelist.add(new CupcakeItem("Triple Choco", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
-        cupcakelist.add(new CupcakeItem("Pumpkin Spice", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
-        cupcakelist.add(new CupcakeItem("Peanut Butter Cup", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
-        cupcakelist.add(new CupcakeItem("Funfetti Explosion", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing"));
+        cupcakelist.add(new CupcakeItem("Rainbow Sprinkle", "Try one of our signature Rainbow Sprinkle cupcakes loaded inside and out! Available in chocolate and vanilla cake with vanilla icing!"));
+        cupcakelist.add(new CupcakeItem("Triple Choco", "The Triple Choco Cupcake is Liam's favourite cupcake, even though we did give you the recipe for this one, it tastes best fresh out of the Eddie Bull Cupcake oven!"));
+        cupcakelist.add(new CupcakeItem("Pumpkin Spice", "The Pumkin Spice Cupcake isn't just good in October but all year round. Definitely a Fan-Fave!"));
+        cupcakelist.add(new CupcakeItem("Peanut Butter Cup", "Peanut Butter Cup is Jarrod's favourite cupcake, creamy peanut butter loaded inside. With a big peanut butter cup sitting on-top!"));
+        cupcakelist.add(new CupcakeItem("Funfetti Explosion", "Funfetti Explosion will be perfect for your little ones, with an explosion of fun colours and flavours!"));
 
         CupcakeAdapter adapter1 = new CupcakeAdapter(getContext(), cupcakelist);
 
