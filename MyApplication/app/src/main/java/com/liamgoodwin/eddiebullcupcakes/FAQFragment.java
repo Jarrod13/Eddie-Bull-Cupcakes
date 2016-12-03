@@ -73,12 +73,12 @@ public class FAQFragment extends Fragment {
 
         list = (ListView) view.findViewById(R.id.faqList);
         ArrayList<FAQItem> faqList = new ArrayList<FAQItem>();
-        faqList.add(new FAQItem("String", "Stores text"));
-        faqList.add(new FAQItem("char", "Stores character"));
-        faqList.add(new FAQItem("Boolean", "Stores true or false"));
-        faqList.add(new FAQItem("Int", "Stores number"));
-        faqList.add(new FAQItem("double", "Stores number with decimal"));
-        faqList.add(new FAQItem("object", "Stores object"));
+        faqList.add(new FAQItem("What time do you open in the morning?", "8 am"));
+        faqList.add(new FAQItem("Do you sell gluten free products?", "Not at the moment"));
+        faqList.add(new FAQItem("Do you have a senior discount?", "Yes for all people over 65 and we have a student discount"));
+        faqList.add(new FAQItem("How long will it take for a dozen cupcakes to be made?", "1 hours"));
+        faqList.add(new FAQItem("Can we order decorated cupcake wrappers?", "Yes as long as their supplied"));
+        faqList.add(new FAQItem("Do you cater?", "Yes we cater"));
 
         ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, faqList);
         list.setAdapter(adapter);
