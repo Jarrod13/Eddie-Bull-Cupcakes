@@ -12,4 +12,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cupsText">cup(s)</string>
+    <string name="milkText">Milk</string>
+    <string name="vanillaExtractText">Vanilla Extract</string>
+    <string name="eggsText">Eggs</string>
+    <string name="vegetableOilText">Vegetable Oil</string>
+    <string name="cocoaText">Cocoa</string>
+    <string name="sugarText">Sugar</string>
+    <string name="saltText">Salt</string>
+    <string name="bakingSodaText">Baking Soda</string>
+    <string name="bakingPowderText">Baking Powder</string>
+    <string name="flourText">Flour</string>
+    <string name="ingredientsTitle">Ingredients Calculator</string>
+    <string name="tspnsText">tspn(s)</string>
 </resources>
