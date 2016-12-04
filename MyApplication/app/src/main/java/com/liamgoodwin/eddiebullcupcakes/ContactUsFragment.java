@@ -108,6 +108,21 @@ public class ContactUsFragment extends Fragment {
             }
         });
 
+        locationButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Uri geoLocation = Uri.parse("geo:0,0?q=42.2464696,-83.0205039(Eddie Bull Cupcakes)");
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(geoLocation);
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(intent);
+                } else {
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "No Installed software available", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+            }
+        });
+
         contactButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
