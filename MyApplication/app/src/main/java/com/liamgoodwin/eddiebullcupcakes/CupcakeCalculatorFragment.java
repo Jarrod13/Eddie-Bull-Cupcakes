@@ -26,11 +26,11 @@ public class CupcakeCalculatorFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    public int price;
 
     private OnFragmentInteractionListener mListener;
 
     public CupcakeCalculatorFragment() {
-        // Required empty public constructor
     }
 
     /**
