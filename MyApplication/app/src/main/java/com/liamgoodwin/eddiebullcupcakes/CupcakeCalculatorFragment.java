@@ -11,6 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -43,16 +46,6 @@ public class CupcakeCalculatorFragment extends Fragment {
     public double pumpkinSpicePrice;
     public double peanutButterCupPrice;
     public double funfettiExplosionPrice;
-
-    public EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleField);
-    public EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoField);
-    public EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceField);
-    public EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupField);
-    public EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionField);
-
-    public CheckBox seniorBox = (CheckBox)myFragmentView.findViewById(R.id.senior);
-    public CheckBox studentBox = (CheckBox)myFragmentView.findViewById(R.id.student);
-
 
     private OnFragmentInteractionListener mListener;
 
@@ -90,24 +83,182 @@ public class CupcakeCalculatorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        myFragmentView = inflater.inflate(R.layout.fragment_ingredients_calculator, container, false);
+        myFragmentView = inflater.inflate(R.layout.fragment_cupcake_calculator, container, false);
+
+        final EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleField);
+        final EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoField);
+        final EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceField);
+        final EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupField);
+        final EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionField);
+
+        final TextView rainbowSprinkleTotal = (TextView)myFragmentView.findViewById(R.id.rainbowSprinkleTotal);
+        final TextView tripleChocoTotal = (TextView)myFragmentView.findViewById(R.id.tripleChocoTotal);
+        final TextView pumpkinSpiceTotal = (TextView)myFragmentView.findViewById(R.id.pumpkinSpiceTotal);
+        final TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
+        final TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
+
+        final CheckBox seniorBox = (CheckBox)myFragmentView.findViewById(R.id.senior);
+        final CheckBox studentBox = (CheckBox)myFragmentView.findViewById(R.id.student);
+
+        final TextView discountText = (TextView)myFragmentView.findViewById(R.id.discountTextView);
+        final TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalTextView);
+
+        TextWatcher rainbow = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                try {
+                    rainbowSprinkleQuantity = Double.valueOf(rainbowSprinkleTextEdit.getText().toString());
+                    rainbowSprinklePrice = rainbowSprinkleQuantity * RainbowSprinkle.getPrice();
+                    rainbowSprinkleTotal.setText("$" + rainbowSprinklePrice);
+
+                    totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
+
+                    if(seniorBox.isPressed() || studentBox.isPressed()) {
+                        totalPrice = totalPrice * .90;
+                        totalDiscount = totalPrice * .10;
+                    }
+
+                    discountText.setText("$" + totalDiscount);
+                    totalText.setText("$" + totalPrice);
+
+                } catch (NumberFormatException e) {
+                    rainbowSprinkleQuantity = 0; // your default value
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+        };
+
+        TextWatcher choco = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                try {
+                    tripleChocoQuantity = Double.valueOf(tripleChocoTextEdit.getText().toString());
+                    tripleChocoPrice = tripleChocoQuantity * TripleChoco.getPrice();
+                    tripleChocoTotal.setText("$" + tripleChocoPrice);
+
+                    totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
+
+                    if(seniorBox.isPressed() || studentBox.isPressed()) {
+                        totalPrice = totalPrice * .90;
+                        totalDiscount = totalPrice * .10;
+                    }
+
+                    discountText.setText("$" + totalDiscount);
+                    totalText.setText("$" + totalPrice);
+                } catch (NumberFormatException e) {
+                    tripleChocoQuantity = 0; // your default value
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+        };
+
+        TextWatcher pumpkin = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                try {
+                    pumpkinSpiceQuantity = Double.valueOf(pumpkinSpiceTextEdit.getText().toString());
+                    pumpkinSpicePrice = pumpkinSpiceQuantity * PumpkinSpice.getPrice();
+                    pumpkinSpiceTotal.setText("$" + pumpkinSpicePrice);
+
+                    totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
+
+                    if(seniorBox.isPressed() || studentBox.isPressed()) {
+                        totalPrice = totalPrice * .90;
+                        totalDiscount = totalPrice * .10;
+                    }
+
+                    discountText.setText("$" + totalDiscount);
+                    totalText.setText("$" + totalPrice);
+                } catch (NumberFormatException e) {
+                    pumpkinSpiceQuantity = 0; // your default value
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+        };
+
+        TextWatcher peanut = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                try {
+                    peanutButterCupQuantity = Double.valueOf(peanutButterCupTextEdit.getText().toString());
+                    peanutButterCupPrice =  peanutButterCupQuantity * PeanutButterCup.getPrice();
+                    peanutButterCupTotal.setText("$" + peanutButterCupPrice);
+
+                    totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
+
+                    if(seniorBox.isPressed() || studentBox.isPressed()) {
+                        totalPrice = totalPrice * .90;
+                        totalDiscount = totalPrice * .10;
+                    }
+
+                    discountText.setText("$" + totalDiscount);
+                    totalText.setText("$" + totalPrice);
+                } catch (NumberFormatException e) {
+                    peanutButterCupQuantity = 0; // your default value
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+        };
+
+        TextWatcher funfetti = new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                try {
+                    funfettiExplosionQuantity = Double.valueOf(funfettiExplosionTextEdit.getText().toString());
+                    funfettiExplosionPrice = funfettiExplosionQuantity * FunfettiExplosion.getPrice();
+                    funfettiExplosionTotal.setText("$" + funfettiExplosionPrice);
+
+                    totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
+
+                    if(seniorBox.isPressed() || studentBox.isPressed()) {
+                        totalPrice = totalPrice * .90;
+                        totalDiscount = totalPrice * .10;
+                    }
+
+                    discountText.setText("$" + totalDiscount);
+                    totalText.setText("$" + totalPrice);
+                } catch (NumberFormatException e) {
+                    funfettiExplosionQuantity = 0; // your default value
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+            }
+        };
 
         rainbowSprinkleTextEdit.addTextChangedListener(rainbow);
         tripleChocoTextEdit.addTextChangedListener(choco);
         pumpkinSpiceTextEdit.addTextChangedListener(pumpkin);
         peanutButterCupTextEdit.addTextChangedListener(peanut);
         funfettiExplosionTextEdit.addTextChangedListener(funfetti);
-
-        rainbowSprinklePrice = rainbowSprinkleQuantity * RainbowSprinkle.getPrice();
-        tripleChocoPrice = tripleChocoQuantity * TripleChoco.getPrice();
-        pumpkinSpicePrice = pumpkinSpiceQuantity * PumpkinSpice.getPrice();
-        peanutButterCupPrice =  peanutButterCupQuantity * PeanutButterCup.getPrice();
-        funfettiExplosionPrice = funfettiExplosionQuantity * FunfettiExplosion.getPrice();
-
-        totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice
-
-        seniorBox.isPressed();
-        studentBox.isPressed();
 
         return myFragmentView;
     }
@@ -151,73 +302,4 @@ public class CupcakeCalculatorFragment extends Fragment {
         void onFragmentInteraction(Uri uri);
     }
 
-    private TextWatcher rainbow = new TextWatcher() {
-
-        public void afterTextChanged(Editable s) {
-        }
-
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
-            rainbowSprinkleQuantity = Double.valueOf(rainbowSprinkleTextEdit.getText().toString());
-        }
-    };
-
-    private TextWatcher choco = new TextWatcher() {
-
-        public void afterTextChanged(Editable s) {
-        }
-
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
-            tripleChocoQuantity = Double.valueOf(tripleChocoTextEdit.getText().toString());
-        }
-    };
-
-    private TextWatcher pumpkin = new TextWatcher() {
-
-        public void afterTextChanged(Editable s) {
-        }
-
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
-            pumpkinSpiceQuantity = Double.valueOf(pumpkinSpiceTextEdit.getText().toString());
-        }
-    };
-
-    private TextWatcher peanut = new TextWatcher() {
-
-        public void afterTextChanged(Editable s) {
-        }
-
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
-            peanutButterCupQuantity = Double.valueOf(peanutButterCupTextEdit.getText().toString());
-        }
-    };
-
-    private TextWatcher funfetti = new TextWatcher() {
-
-        public void afterTextChanged(Editable s) {
-        }
-
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        }
-
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
-            funfettiExplosionQuantity = Double.valueOf(funfettiExplosionTextEdit.getText().toString());
-        }
-    };
 }
