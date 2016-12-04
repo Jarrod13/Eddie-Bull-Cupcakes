@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.liamgoodwin.eddiebullcupcakes.ContactUsFragment"
+    android:orientation="vertical"
+    android:background="@color/backgroundColour">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contactUs"
+        android:id="@+id/textView25"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textColor="@color/buttonColour"
+        android:padding="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Here at Eddie Bull Cupcakes we strive to make your experience the best possible. All emails and calls will be answered in 1 business day, or your next cupcake will be free. Thank you for choosing us!"
+        android:id="@+id/contactUsDescription"
+        android:textAlignment="center"
+        android:textColor="@color/buttonColour"
+        android:padding="10dp"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call Us"
+        android:id="@+id/callUsButton"
+        android:background="@color/buttonColour"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email Us"
+        android:id="@+id/emailUsButton"
+        android:background="@color/buttonColour"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View On Map"
+        android:id="@+id/mapButton"
+        android:background="@color/buttonColour"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Contact"
+        android:id="@+id/contactButton"
+        android:background="@color/buttonColour"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@android:color/white" />
+</LinearLayout>

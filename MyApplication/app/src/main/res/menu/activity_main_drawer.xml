@@ -31,10 +31,6 @@
         android:icon="@drawable/rollingpin"
         android:title="Meet The Bakers" />
         <item
-        android:id="@+id/nav_social"
-        android:icon="@drawable/ic_menu_share"
-        android:title="Get Social" />
-        <item
         android:id="@+id/nav_about"
         android:icon="@drawable/ic_people_24dp"
         android:title="About Us" />
