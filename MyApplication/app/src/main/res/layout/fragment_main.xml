@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/phoneButton"
-        android:id="@+id/button"
+        android:id="@+id/callUsMainButton"
         android:background="@color/buttonColour"
         android:layout_marginBottom="10dp"
         android:textColor="@color/buttonTextColour" />
@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/locationButton"
-        android:id="@+id/button2"
+        android:id="@+id/locationMainButton"
         android:background="@color/buttonColour"
         android:layout_marginBottom="10dp"
         android:textColor="@color/buttonTextColour" />
