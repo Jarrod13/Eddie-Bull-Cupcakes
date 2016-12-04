@@ -3,7 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.liamgoodwin.eddiebullcupcakes.CupcakeCalculatorFragment"
-    android:background="@color/backgroundColour">
+    android:background="@color/backgroundColour"
+    android:paddingLeft="10dp"
+    android:paddingTop="30dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
 
 
     <TextView
@@ -27,11 +31,12 @@
         android:layout_below="@+id/textView10"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textAlignment="viewEnd" />
+        android:paddingBottom="20dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,11 +47,12 @@
         android:textColor="@color/buttonColour"
         android:layout_below="@+id/textView11"
         android:layout_alignParentLeft="true"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textAlignment="viewEnd" />
+        android:paddingBottom="20dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,11 +63,12 @@
         android:textColor="@color/buttonColour"
         android:layout_below="@+id/textView12"
         android:layout_alignParentLeft="true"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textAlignment="viewEnd" />
+        android:paddingBottom="20dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,11 +79,12 @@
         android:textColor="@color/buttonColour"
         android:layout_below="@+id/textView13"
         android:layout_alignParentLeft="true"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textAlignment="viewEnd" />
+        android:paddingBottom="20dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,20 +95,21 @@
         android:textColor="@color/buttonColour"
         android:layout_below="@+id/textView14"
         android:layout_alignParentLeft="true"
-        android:paddingTop="20dp"
+        android:paddingTop="30dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textAlignment="viewEnd" />
+        android:paddingBottom="20dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/rainbowSprinkleField"
-        android:paddingBottom="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
@@ -114,10 +123,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tripleChocoField"
-        android:paddingBottom="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
@@ -129,10 +138,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/pumpkinSpiceField"
-        android:paddingBottom="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
@@ -144,10 +153,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/peanutButterCupField"
-        android:paddingBottom="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
@@ -159,10 +168,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/funfettiExplosionField"
-        android:paddingBottom="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
@@ -178,13 +187,14 @@
         android:id="@+id/rainbowSprinkleTotal"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:paddingRight="10dp"
         android:layout_alignTop="@+id/rainbowSprinkleField"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -194,11 +204,12 @@
         android:id="@+id/tripleChocoTotal"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:paddingRight="10dp"
         android:layout_below="@+id/rainbowSprinkleTotal"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -208,11 +219,12 @@
         android:id="@+id/pumpkinSpiceTotal"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:paddingRight="10dp"
         android:layout_below="@+id/tripleChocoTotal"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -222,11 +234,12 @@
         android:id="@+id/peanutButterCupTotal"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:paddingRight="10dp"
         android:layout_below="@+id/pumpkinSpiceTotal"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -236,82 +249,29 @@
         android:id="@+id/funfettiExplosionTotal"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
         android:paddingRight="10dp"
         android:layout_below="@+id/peanutButterCupTotal"
-        android:layout_alignParentRight="true" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you a senior? (65+)"
-        android:id="@+id/senior"
-        android:textColor="@color/buttonColour"
-        android:layout_below="@+id/textView15"
-        android:layout_alignRight="@+id/textView15"
-        android:layout_alignEnd="@+id/textView15"
-        android:layout_marginTop="26dp" />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Are you a student?"
-        android:id="@+id/student"
-        android:textColor="@color/buttonColour"
-        android:layout_alignTop="@+id/senior"
-        android:layout_alignLeft="@+id/funfettiExplosionField"
-        android:layout_alignStart="@+id/funfettiExplosionField" />
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Discount       ="
-        android:id="@+id/textView21"
-        android:textColor="@color/buttonColour"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_below="@+id/senior"
-        android:layout_alignLeft="@+id/senior"
-        android:layout_alignStart="@+id/senior" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="$"
-        android:id="@+id/discountTextView"
-        android:textColor="@color/buttonColour"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_alignTop="@+id/textView21"
-        android:layout_alignRight="@+id/student"
-        android:layout_alignEnd="@+id/student" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Total              ="
+        android:text="Total            ="
         android:id="@+id/textView23"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:paddingLeft="10dp"
         android:paddingTop="20dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:layout_below="@+id/discountTextView"
-        android:layout_alignLeft="@+id/senior" />
+        android:layout_alignBottom="@+id/totalTextView"
+        android:layout_alignLeft="@+id/textView15"
+        android:layout_alignStart="@+id/textView15" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -321,12 +281,13 @@
         android:id="@+id/totalTextView"
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
-        android:textSize="25dp"
+        android:textSize="30dp"
         android:paddingLeft="10dp"
         android:paddingTop="20dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:layout_below="@+id/discountTextView"
-        android:layout_alignLeft="@+id/discountTextView"
-        android:layout_alignStart="@+id/discountTextView" />
+        android:layout_below="@+id/funfettiExplosionField"
+        android:layout_toRightOf="@+id/funfettiExplosionField"
+        android:layout_toEndOf="@+id/funfettiExplosionField"
+        android:layout_marginTop="52dp" />
 </RelativeLayout>

@@ -97,10 +97,6 @@ public class CupcakeCalculatorFragment extends Fragment {
         final TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
         final TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
 
-        final CheckBox seniorBox = (CheckBox)myFragmentView.findViewById(R.id.senior);
-        final CheckBox studentBox = (CheckBox)myFragmentView.findViewById(R.id.student);
-
-        final TextView discountText = (TextView)myFragmentView.findViewById(R.id.discountTextView);
         final TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalTextView);
 
         TextWatcher rainbow = new TextWatcher() {
@@ -113,12 +109,6 @@ public class CupcakeCalculatorFragment extends Fragment {
 
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
-                    if(seniorBox.isPressed() || studentBox.isPressed()) {
-                        totalPrice = totalPrice * .90;
-                        totalDiscount = totalPrice * .10;
-                    }
-
-                    discountText.setText("$" + totalDiscount);
                     totalText.setText("$" + totalPrice);
 
                 } catch (NumberFormatException e) {
@@ -144,12 +134,6 @@ public class CupcakeCalculatorFragment extends Fragment {
 
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
-                    if(seniorBox.isPressed() || studentBox.isPressed()) {
-                        totalPrice = totalPrice * .90;
-                        totalDiscount = totalPrice * .10;
-                    }
-
-                    discountText.setText("$" + totalDiscount);
                     totalText.setText("$" + totalPrice);
                 } catch (NumberFormatException e) {
                     tripleChocoQuantity = 0; // your default value
@@ -174,12 +158,6 @@ public class CupcakeCalculatorFragment extends Fragment {
 
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
-                    if(seniorBox.isPressed() || studentBox.isPressed()) {
-                        totalPrice = totalPrice * .90;
-                        totalDiscount = totalPrice * .10;
-                    }
-
-                    discountText.setText("$" + totalDiscount);
                     totalText.setText("$" + totalPrice);
                 } catch (NumberFormatException e) {
                     pumpkinSpiceQuantity = 0; // your default value
@@ -204,12 +182,6 @@ public class CupcakeCalculatorFragment extends Fragment {
 
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
-                    if(seniorBox.isPressed() || studentBox.isPressed()) {
-                        totalPrice = totalPrice * .90;
-                        totalDiscount = totalPrice * .10;
-                    }
-
-                    discountText.setText("$" + totalDiscount);
                     totalText.setText("$" + totalPrice);
                 } catch (NumberFormatException e) {
                     peanutButterCupQuantity = 0; // your default value
@@ -234,12 +206,6 @@ public class CupcakeCalculatorFragment extends Fragment {
 
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
-                    if(seniorBox.isPressed() || studentBox.isPressed()) {
-                        totalPrice = totalPrice * .90;
-                        totalDiscount = totalPrice * .10;
-                    }
-
-                    discountText.setText("$" + totalDiscount);
                     totalText.setText("$" + totalPrice);
                 } catch (NumberFormatException e) {
                     funfettiExplosionQuantity = 0; // your default value
