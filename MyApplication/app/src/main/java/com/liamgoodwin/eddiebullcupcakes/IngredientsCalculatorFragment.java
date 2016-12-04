@@ -162,7 +162,6 @@ public class IngredientsCalculatorFragment extends Fragment {
         eggs.setText(eggsAmount + "");
         vanillaExtract.setText(vanillaExtractAmount + "");
         milk.setText(milkAmount + "");
-
         return myFragmentView;
 
     }
