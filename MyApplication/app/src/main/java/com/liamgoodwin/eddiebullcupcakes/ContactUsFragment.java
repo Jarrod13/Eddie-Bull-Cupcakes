@@ -90,6 +90,24 @@ public class ContactUsFragment extends Fragment {
             }
         });
 
+        emailUsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+
+                intent.setType("plain/text");
+                intent.putExtra(android.content.Intent.EXTRA_EMAIL, email);
+                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Cupcake Inquiry");
+                intent.putExtra(android.content.Intent.EXTRA_TEXT, "Hello,");
+                if (intent.resolveActivity(getActivity().getPackageManager())!=null) {
+                    startActivity(intent);
+                } else {
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "No Installed software available", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+            }
+        });
+
         contactButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
