@@ -77,9 +77,18 @@ public class ContactUsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
         Button callUsButton = (Button) view.findViewById(R.id.callUsButton);
-        Button textUsButton = (Button) view.findViewById(R.id.textUsButton);
+        Button emailUsButton = (Button) view.findViewById(R.id.emailUsButton);
         Button locationButton = (Button) view.findViewById(R.id.mapButton);
         Button contactButton = (Button) view.findViewById(R.id.contactButton);
+
+        callUsButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:5199873456"));
+                startActivity(intent);
+            }
+        });
 
         contactButton.setOnClickListener(new View.OnClickListener() {
 
