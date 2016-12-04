@@ -25,4 +25,5 @@
     <string name="flourText">Flour</string>
     <string name="ingredientsTitle">Ingredients Calculator</string>
     <string name="tspnsText">tspn(s)</string>
+    <string name="contactUs">Contact Us</string>
 </resources>
