@@ -1,7 +1,7 @@
 package com.liamgoodwin.eddiebullcupcakes;
 
 public class RainbowSprinkle extends CupcakeCalculatorFragment {
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
 
@@ -9,5 +9,5 @@ public class RainbowSprinkle extends CupcakeCalculatorFragment {
         this.price = price;
     }
 
-    public double price = 2.00;
+    public static double price = 2.00;
 }

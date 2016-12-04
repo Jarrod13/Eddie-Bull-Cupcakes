@@ -96,7 +96,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/rainbowSprinkleField"
         android:paddingBottom="10dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
@@ -113,7 +113,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/tripleChocoField"
         android:paddingBottom="10dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
@@ -121,14 +121,14 @@
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/rainbowSprinkleField"
         android:layout_toRightOf="@+id/textView14"
         android:layout_marginLeft="23dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/pumpkinSpiceField"
         android:paddingBottom="10dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
@@ -136,14 +136,14 @@
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/tripleChocoField"
         android:layout_toRightOf="@+id/textView14"
         android:layout_marginLeft="23dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/peanutButterCupField"
         android:paddingBottom="10dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
@@ -151,14 +151,14 @@
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/pumpkinSpiceField"
         android:layout_toRightOf="@+id/textView14"
         android:layout_marginLeft="23dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText5"
+        android:id="@+id/funfettiExplosionField"
         android:paddingBottom="10dp"
         android:paddingTop="20dp"
         android:paddingRight="20dp"
@@ -166,7 +166,7 @@
         android:textColor="@color/buttonColour"
         android:textAlignment="center"
         android:text="1"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/peanutButterCupField"
         android:layout_toRightOf="@+id/textView14"
         android:layout_marginLeft="23dp" />
 
@@ -181,7 +181,7 @@
         android:paddingTop="20dp"
         android:paddingBottom="10dp"
         android:paddingRight="10dp"
-        android:layout_alignTop="@+id/editText"
+        android:layout_alignTop="@+id/rainbowSprinkleField"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -245,7 +245,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Are you a senior? (65+)"
-        android:id="@+id/checkBox"
+        android:id="@+id/senior"
         android:textColor="@color/buttonColour"
         android:layout_below="@+id/textView15"
         android:layout_alignRight="@+id/textView15"
@@ -256,11 +256,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Are you a student?"
-        android:id="@+id/checkBox2"
+        android:id="@+id/student"
         android:textColor="@color/buttonColour"
-        android:layout_alignTop="@+id/checkBox"
-        android:layout_alignLeft="@+id/editText5"
-        android:layout_alignStart="@+id/editText5" />
+        android:layout_alignTop="@+id/senior"
+        android:layout_alignLeft="@+id/funfettiExplosionField"
+        android:layout_alignStart="@+id/funfettiExplosionField" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -275,9 +275,9 @@
         android:paddingTop="20dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:layout_below="@+id/checkBox"
-        android:layout_alignLeft="@+id/checkBox"
-        android:layout_alignStart="@+id/checkBox" />
+        android:layout_below="@+id/senior"
+        android:layout_alignLeft="@+id/senior"
+        android:layout_alignStart="@+id/senior" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -293,8 +293,8 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:layout_alignTop="@+id/textView21"
-        android:layout_alignRight="@+id/checkBox2"
-        android:layout_alignEnd="@+id/checkBox2" />
+        android:layout_alignRight="@+id/student"
+        android:layout_alignEnd="@+id/student" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -310,7 +310,7 @@
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:layout_below="@+id/textView22"
-        android:layout_alignLeft="@+id/checkBox" />
+        android:layout_alignLeft="@+id/senior" />
 
     <TextView
         android:layout_width="wrap_content"

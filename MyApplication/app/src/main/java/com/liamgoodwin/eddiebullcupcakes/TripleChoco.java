@@ -1,7 +1,7 @@
 package com.liamgoodwin.eddiebullcupcakes;
 
 public class TripleChoco extends CupcakeCalculatorFragment {
-    public double getPrice() {
+    public static double getPrice() {
         return price;
     }
 
@@ -9,5 +9,5 @@ public class TripleChoco extends CupcakeCalculatorFragment {
         this.price = price;
     }
 
-    public double price = 2.15;
+    public static double price = 2.15;
 }
