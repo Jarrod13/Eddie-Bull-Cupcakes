@@ -1,12 +1,16 @@
 package com.liamgoodwin.eddiebullcupcakes;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -26,6 +30,13 @@ public class ContactUsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    String name = "Eddie Bull Cupcakes";
+    String email = "eddiebullcupcakes@gmail.com";
+    String phone = "5199873456";
+    Button callUsButton;
+    Button textUsButton;
+    Button locationButton;
+    Button contactButton;
 
     private OnFragmentInteractionListener mListener;
 
@@ -63,8 +74,32 @@ public class ContactUsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact_us, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
+
+        Button callUsButton = (Button) view.findViewById(R.id.callUsButton);
+        Button textUsButton = (Button) view.findViewById(R.id.textUsButton);
+        Button locationButton = (Button) view.findViewById(R.id.mapButton);
+        Button contactButton = (Button) view.findViewById(R.id.contactButton);
+
+        contactButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_INSERT);
+                intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+                intent.putExtra(ContactsContract.Intents.Insert.NAME, name);
+                intent.putExtra(ContactsContract.Intents.Insert.PHONE, phone );
+                intent.putExtra(ContactsContract.Intents.Insert.EMAIL, email);
+                if (intent.resolveActivity(getActivity().getPackageManager())!=null) {
+                    startActivity(intent);
+                } else {
+                    Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "No Installed software available", Snackbar.LENGTH_SHORT);
+                    snackbar.show();
+                }
+            }
+
+        });
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
