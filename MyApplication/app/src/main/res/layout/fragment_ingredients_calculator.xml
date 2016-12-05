@@ -181,11 +181,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/bakingPowderEditText"
         android:textSize="20dp"
-        android:layout_alignTop="@+id/tspnsText"
-        android:layout_alignLeft="@+id/bakingSodaEditText"
-        android:layout_alignStart="@+id/bakingSodaEditText"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/bakingPowderTextView"
+        android:layout_alignLeft="@+id/bakingSodaEditText"
+        android:layout_alignStart="@+id/bakingSodaEditText" />
 
     <TextView
         android:layout_width="150dp"
@@ -206,11 +206,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/saltEditText"
         android:textSize="20dp"
-        android:layout_alignBottom="@+id/tspnsText"
-        android:layout_alignLeft="@+id/sugarEditText"
-        android:layout_alignStart="@+id/sugarEditText"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/saltTextView"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title" />
 
     <TextView
         android:layout_width="150dp"
@@ -271,11 +271,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/vanillaExtractEditText"
         android:textSize="20dp"
-        android:layout_alignBottom="@+id/tspnsText"
-        android:layout_alignLeft="@+id/eggsEditText"
-        android:layout_alignStart="@+id/eggsEditText"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_above="@+id/sugarTextView"
+        android:layout_alignLeft="@+id/sugarEditText"
+        android:layout_alignStart="@+id/sugarEditText" />
 
     <TextView
         android:layout_width="150dp"
