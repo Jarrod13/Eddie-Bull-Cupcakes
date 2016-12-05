@@ -25,6 +25,7 @@
     <string name="flourText">Flour</string>
     <string name="ingredientsTitle">Ingredients Calculator</string>
     <string name="tspnsText">tspn(s)</string>
+<<<<<<< HEAD
     <string name="aboutUsTitle">About Us</string>
     <string name="callUsButton">Call Us Now</string>
     <string name="seeOnMapButton">See Us On The Map</string>
@@ -35,4 +36,7 @@
     <string name="peanutButterCupTitle">Peanut Butter Cup  x</string>
     <string name="funfettiExplosionTitle">Funfetti Explosion  x</string>
     <string name="totalTextView">Total              =</string>
+=======
+    <string name="contactUs">Contact Us</string>
+>>>>>>> 9695420e034e906489e55bd2c0b591376f561716
 </resources>
