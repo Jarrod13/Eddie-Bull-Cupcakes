@@ -30,7 +30,6 @@
             android:textSize="18sp"
             android:allowUndo="false"
             android:minHeight="200dp"
-            android:text="hello world"
             android:paddingTop="40dp"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"

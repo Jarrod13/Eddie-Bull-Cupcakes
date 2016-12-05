@@ -15,7 +15,7 @@
         android:id="@+id/title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:layout_margin="20dp"
         android:textColor="@color/colorPrimary" />
 
@@ -166,21 +166,18 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/flourEditText"
-        android:layout_alignBottom="@+id/flourTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:textSize="20dp"
-        android:layout_alignParentStart="false"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/flourTextView"
+        android:layout_alignLeft="@+id/bakingPowderEditText"
+        android:layout_alignStart="@+id/bakingPowderEditText" />
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/bakingPowderEditText"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:layout_alignTop="@+id/bakingPowderTextView"
@@ -191,15 +188,12 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/bakingSodaEditText"
-        android:layout_alignBottom="@+id/bakingSodaTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:textSize="20dp"
-        android:layout_alignParentStart="false"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/bakingSodaTextView"
+        android:layout_alignLeft="@+id/vanillaExtractEditText"
+        android:layout_alignStart="@+id/vanillaExtractEditText" />
 
     <TextView
         android:layout_width="150dp"
@@ -209,62 +203,52 @@
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:layout_alignTop="@+id/saltTextView"
+        android:layout_alignRight="@+id/batchesTextView"
+        android:layout_alignEnd="@+id/batchesTextView" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sugarEditText"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/sugarTextView"
+        android:layout_toLeftOf="@+id/tspnsText"
+        android:layout_toStartOf="@+id/tspnsText" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cocoaEditText"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/cocoaTextView"
         android:layout_alignRight="@+id/title"
         android:layout_alignEnd="@+id/title" />
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:id="@+id/sugarEditText"
-        android:layout_alignBottom="@+id/sugarTextView"
-        android:layout_alignLeft="@+id/cocoaEditText"
-        android:layout_alignStart="@+id/cocoaEditText"
-        android:textSize="20dp"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
-
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/cocoaEditText"
-        android:layout_alignBottom="@+id/cocoaTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
-        android:textSize="20dp"
-        android:layout_alignParentStart="false"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
-
-    <TextView
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
         android:id="@+id/vegetableOilEditText"
-        android:layout_alignBottom="@+id/vegetableOilTextView"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="false"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="50dp"
         android:textSize="20dp"
-        android:layout_alignParentStart="false"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/vegetableOilTextView"
+        android:layout_toLeftOf="@+id/cupsText"
+        android:layout_toStartOf="@+id/cupsText" />
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/eggsEditText"
-        android:layout_alignBottom="@+id/eggsTextView"
-        android:layout_alignLeft="@+id/vegetableOilEditText"
-        android:layout_alignStart="@+id/vegetableOilEditText"
         android:textSize="20dp"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/eggsTextView"
+        android:layout_toLeftOf="@+id/cupsText"
+        android:layout_toStartOf="@+id/cupsText" />
 
     <TextView
         android:layout_width="150dp"
@@ -273,23 +257,20 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
-        android:layout_above="@+id/sugarTextView"
-        android:layout_alignLeft="@+id/sugarEditText"
-        android:layout_alignStart="@+id/sugarEditText" />
+        android:layout_alignTop="@+id/tspnsText"
+        android:layout_toLeftOf="@+id/cupsText"
+        android:layout_toStartOf="@+id/cupsText" />
 
     <TextView
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:id="@+id/milkEditText"
-        android:layout_alignBottom="@+id/milkTextView"
-        android:layout_alignLeft="@+id/vanillaExtractEditText"
-        android:layout_alignStart="@+id/vanillaExtractEditText"
-        android:layout_marginRight="50dp"
         android:textSize="20dp"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBottom="@+id/milkTextView"
+        android:layout_toLeftOf="@+id/cupsText"
+        android:layout_toStartOf="@+id/cupsText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -344,12 +325,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/cupsText"
         android:id="@+id/cupsText"
-        android:layout_alignBottom="@+id/sugarEditText"
-        android:layout_alignLeft="@+id/cupsText"
-        android:layout_alignStart="@+id/cupsText"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="false"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:layout_alignTop="@+id/sugarTextView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
