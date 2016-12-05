@@ -22,14 +22,14 @@
             android:textColor="@color/colorPrimary"
             android:padding="10dp"
             android:textSize="20dp"
-            android:layout_below="@+id/textView9"
+            android:layout_below="@+id/aboutUsTitle"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Call Us Now"
+            android:text="@string/callUsButton"
             android:id="@+id/callNow"
             android:layout_gravity="right|bottom"
             android:layout_above="@+id/openMap"
@@ -40,7 +40,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="See Us On The Map"
+            android:text="@string/seeOnMapButton"
             android:id="@+id/openMap"
             android:layout_gravity="right|center_vertical"
             android:layout_alignParentBottom="true"
@@ -53,8 +53,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="About Us"
-            android:id="@+id/textView9"
+            android:text="@string/aboutUsTitle"
+            android:id="@+id/aboutUsTitle"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textSize="40dp"

@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity
         FAQFragment.OnFragmentInteractionListener, 
         CupcakesFragment.OnFragmentInteractionListener,
         IngredientsCalculatorFragment.OnFragmentInteractionListener,
-        CupcakeCalculatorFragment.OnFragmentInteractionListener {
+        CupcakeCalculatorFragment.OnFragmentInteractionListener,
+        MeetTheBakersFragment.OnFragmentInteractionListener {
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -135,6 +136,11 @@ public class MainActivity extends AppCompatActivity
             tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
             tran.commit();
         }
+        else if (id == R.id.nav_bakers) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new MeetTheBakersFragment());
+            tran.commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -143,6 +149,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
 
     }
 }
