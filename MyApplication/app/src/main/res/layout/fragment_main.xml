@@ -10,7 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.liamgoodwin.eddiebullcupcakes.MainFragment"
-    tools:showIn="@layout/app_bar_main"
     android:background="@color/backgroundColour"
     android:orientation="vertical">
 
@@ -21,13 +20,14 @@
         android:src="@drawable/title" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/logoImage"
-        android:src="@drawable/ebclogo"
+        android:src="@drawable/ebclogosmall"
         android:maxHeight="50dp"
         android:maxWidth="50dp"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:layout_width="match_parent"
