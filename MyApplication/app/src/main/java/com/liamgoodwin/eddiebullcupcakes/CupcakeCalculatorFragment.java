@@ -38,20 +38,6 @@ public class CupcakeCalculatorFragment extends Fragment {
     public double peanutButterCupPrice;
     public double funfettiExplosionPrice;
 
-    public EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleTextEdit);
-    public EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoTextEdit);
-    public EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceTextEdit);
-    public EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupTextEdit);
-    public EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionTextEdit);
-
-    public TextView rainbowSprinkleTotal = (TextView)myFragmentView.findViewById(R.id.rainbowSprinkleTotal);
-    public TextView tripleChocoTotal = (TextView)myFragmentView.findViewById(R.id.tripleChocoTotal);
-    public TextView pumpkinSpiceTotal = (TextView)myFragmentView.findViewById(R.id.pumpkinSpiceTotal);
-    public TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
-    public TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
-
-    public TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalTextView);
-
     private OnFragmentInteractionListener mListener;
 
     public CupcakeCalculatorFragment() {
@@ -95,7 +81,21 @@ public class CupcakeCalculatorFragment extends Fragment {
         // Inflate the layout for this fragment
         myFragmentView = inflater.inflate(R.layout.fragment_cupcake_calculator, container, false);
 
-       TextWatcher rainbow = new TextWatcher() {
+        final EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleTextEdit);
+        final  EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoTextEdit);
+        final EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceTextEdit);
+        final EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupTextEdit);
+        final EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionTextEdit);
+
+        final TextView rainbowSprinkleTotal = (TextView)myFragmentView.findViewById(R.id.rainbowSprinkleTotal);
+        final TextView tripleChocoTotal = (TextView)myFragmentView.findViewById(R.id.tripleChocoTotal);
+        final TextView pumpkinSpiceTotal = (TextView)myFragmentView.findViewById(R.id.pumpkinSpiceTotal);
+        final TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
+        final TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
+
+        final TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalAmountTextEdit);
+
+        TextWatcher rainbow = new TextWatcher() {
 
            public void afterTextChanged(Editable s) {
                try {
@@ -131,6 +131,7 @@ public class CupcakeCalculatorFragment extends Fragment {
                     totalPrice = rainbowSprinklePrice + tripleChocoPrice + pumpkinSpicePrice + peanutButterCupPrice + funfettiExplosionPrice;
 
                     totalText.setText("$" + totalPrice);
+                    //Text.setText( String.format( "Value of a: %.2f", a ) );
                 } catch (NumberFormatException e) {
                     tripleChocoQuantity = 0; // your default value
                 }

@@ -20,7 +20,7 @@
             android:title="Pricing Calculator" />
     <item
         android:id="@+id/nav_icalculator"
-        android:icon="@drawable/cupcake3"
+        android:icon="@drawable/cupcake2"
         android:title="Ingredients Calculator" />
     </group>
 

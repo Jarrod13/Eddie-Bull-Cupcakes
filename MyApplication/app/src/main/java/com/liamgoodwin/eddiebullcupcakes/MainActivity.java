@@ -1,5 +1,6 @@
 package com.liamgoodwin.eddiebullcupcakes;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
@@ -80,13 +81,10 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
 //        if (id == R.id.action_settings) {
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//            SettingsFragment fragment = new SettingsFragment();
-//            fragmentTransaction.replace(R.id.mainFrame, new SettingsFragment());
-//            fragmentTransaction.commit();
+//            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+//            startActivity(intent);
+//            return true;
 //        }
 
           return super.onOptionsItemSelected(item);
