@@ -133,11 +133,11 @@ public class MainActivity extends AppCompatActivity
             tran.replace(R.id.mainFrame, new IngredientsCalculatorFragment());
             tran.commit();
         }
-        else if (id == R.id.nav_pcalculator) {
-            FragmentTransaction tran = fm.beginTransaction();
-            tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
-            tran.commit();
-        }
+//        else if (id == R.id.nav_pcalculator) {
+//            FragmentTransaction tran = fm.beginTransaction();
+//            tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
+//            tran.commit();
+//        }
         else if (id == R.id.nav_bakers) {
             FragmentTransaction tran = fm.beginTransaction();
             tran.replace(R.id.mainFrame, new MeetTheBakersFragment());
