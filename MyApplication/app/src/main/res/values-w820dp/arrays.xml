@@ -1,69 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--<string-array name="dice_sides_menu">-->
-        <!--<item>100</item>-->
-        <!--<item>20</item>-->
-        <!--<item>12</item>-->
-        <!--<item>10</item>-->
-        <!--<item>6</item>-->
-    <!--</string-array>-->
-    <!--<string-array name="dice_sides">-->
-        <!--<item>100</item>-->
-        <!--<item>20</item>-->
-        <!--<item>12</item>-->
-        <!--<item>10</item>-->
-        <!--<item>6</item>-->
-    <!--</string-array>-->
+    <string-array name="languages">
+        <item name="english">English</item>
+        <item name="french">French</item>
+    </string-array>
 
-    <!--<string-array name="num_players">-->
-        <!--<item>7</item>-->
-        <!--<item>6</item>-->
-        <!--<item>5</item>-->
-        <!--<item>4</item>-->
-        <!--<item>3</item>-->
-        <!--<item>2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="num_players_menu">-->
-        <!--<item>7</item>-->
-        <!--<item>6</item>-->
-        <!--<item>5</item>-->
-        <!--<item>4</item>-->
-        <!--<item>3</item>-->
-        <!--<item>2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="num_cards">-->
-        <!--<item>8</item>-->
-        <!--<item>7</item>-->
-        <!--<item>6</item>-->
-        <!--<item>5</item>-->
-        <!--<item>4</item>-->
-        <!--<item>3</item>-->
-        <!--<item>2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="num_cards_menu">-->
-        <!--<item>8</item>-->
-        <!--<item>7</item>-->
-        <!--<item>6</item>-->
-        <!--<item>5</item>-->
-        <!--<item>4</item>-->
-        <!--<item>3</item>-->
-        <!--<item>2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="life_total">-->
-        <!--<item>100</item>-->
-        <!--<item>40</item>-->
-        <!--<item>30</item>-->
-        <!--<item>20</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="life_total_menu">-->
-        <!--<item>100</item>-->
-        <!--<item>40</item>-->
-        <!--<item>30</item>-->
-        <!--<item>20</item>-->
-    <!--</string-array>-->
+    <string-array name="languagesValues">
+        <item name="english">en</item>
+        <item name="french">fr</item>
+    </string-array>
 </resources>

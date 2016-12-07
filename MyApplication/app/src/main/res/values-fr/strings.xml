@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eddie Bull Cupcakes</string>
+    <string name="aboutUs">Notre société Eddie-Bull Cupcakes a été autour depuis la fin 2016. Nous nous spécialisons strictement cupcakes, et ont actuellement plus de 10 cupcakes différents. Notre signature étant le Triple-Choco, qui est notre préféré aussi bien! Nous venons d\'ouvrir notre premier magasin à la cafétéria du St. Clair College. Arrêtez d\'acheter une remise d\'étudiant de 10% avec une carte d\'étudiant valide!</string>
+    <string name="aboutUsTitle">À propos de nous</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="bakingPowderText">Levure </string>
+    <string name="bakingSodaText">Bicarbonate de soude</string>
+    <string name="callUsButton">Appelez-nous maintenant</string>
+    <string name="cocoaText">Cacao</string>
+    <string name="contactUs">Contactez nous </string>
+    <string name="cupsText">Tasse (s) </string>
+    <string name="eggsText">Des œufs </string>
+    <string name="flourText">Farine</string>
+    <string name="funfettiExplosionTitle">Explosion Funfetti x </string>
+    <string name="hello_blank_fragment">Hello World</string>
+    <string name="ingredientsTitle">Calculateur d\'Ingrédients </string>
+    <string name="locationButton">Voir sur la carte </string>
+    <string name="milkText">Lait </string>
+    <string name="navigation_drawer_close">Fermer le tiroir de navigation </string>
+    <string name="navigation_drawer_open">Ouvrir le tiroir de navigation </string>
+    <string name="peanutButterCupTitle">Coupe au beurre d\'arachide x </string>
+    <string name="phoneButton">Appelez-nous </string>
+    <string name="pricingCalculatorTitle">Calculatrice de prix </string>
+    <string name="pumpkinSpiceTitle">Épice de citrouille x </string>
+    <string name="rainbowSprinkleTitle">Rainbow Sprinkle    x</string>
+    <string name="saltText">Sel</string>
+    <string name="seeOnMapButton">Nous voir sur la carte </string>
+    <string name="sugarText">Sucre </string>
+    <string name="totalTextView">Total              =</string>
+    <string name="tripleChocoTitle">Triple Choco            x</string>
+    <string name="vanillaExtractText">Extrait de vanille </string>
+    <string name="tspnsText">tspn(s)</string>
+    <string name="vegetableOilText">Huile végétale </string>
+    <string name="welcomeDescription">Bienvenue à l\'application Eddie Bull Cupcakes où vous trouverez de délicieux petits gâteaux </string>
+</resources>
