@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+            android:key="language"
+            android:title="Language"
+            android:summary="Please select the language you would like to view the Eddie Bull Cupcakes app in"
+            android:defaultValue="en"
+            android:entries="@array/languages"
+            android:entryValues="@array/languagesValues">
+    </ListPreference>
+
+</PreferenceScreen>

@@ -73,12 +73,12 @@ public class FAQFragment extends Fragment {
 
         list = (ListView) view.findViewById(R.id.faqList);
         ArrayList<FAQItem> faqList = new ArrayList<FAQItem>();
-        faqList.add(new FAQItem("What time do you open in the morning?", "8 am"));
-        faqList.add(new FAQItem("Do you sell gluten free products?", "Not at the moment"));
-        faqList.add(new FAQItem("Do you have a senior discount?", "Yes for all people over 65 and we have a student discount"));
-        faqList.add(new FAQItem("How long will it take for a dozen cupcakes to be made?", "1 hours"));
-        faqList.add(new FAQItem("Can we order decorated cupcake wrappers?", "Yes as long as their supplied"));
-        faqList.add(new FAQItem("Do you cater?", "Yes we cater"));
+        faqList.add(new FAQItem("What Time Do You Open In The Morning?", "8 AM."));
+        faqList.add(new FAQItem("Do You Sell Gluten Free Products?", "Sorry! Not at the moment."));
+        faqList.add(new FAQItem("Do You Have a Senior Discount?", "Yes for all customers 65+ and we have a student discount which are both 10%."));
+        faqList.add(new FAQItem("How Long Will It Take For a Dozen Cupcakes To Be Made?", "1 hour guarantee from the time you call us."));
+        faqList.add(new FAQItem("Can We Order Decorated Cupcake Wrappers?", "Yes as long as their supplied in advance."));
+        faqList.add(new FAQItem("Do You Cater?", "Yes we cater for orders with a minimum of 6 dozen cupcakes (72 cupcakes)."));
 
         ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, faqList);
         list.setAdapter(adapter);

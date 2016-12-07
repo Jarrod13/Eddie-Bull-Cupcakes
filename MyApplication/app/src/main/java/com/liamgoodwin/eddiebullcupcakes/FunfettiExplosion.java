@@ -2,6 +2,7 @@ package com.liamgoodwin.eddiebullcupcakes;
 
 
 public class FunfettiExplosion extends CupcakeCalculatorFragment {
+
     public static double getPrice() {
         return price;
     }
@@ -10,6 +11,9 @@ public class FunfettiExplosion extends CupcakeCalculatorFragment {
         this.price = price;
     }
 
+    /**
+     * @param price is the price of this cupcake
+     */
     public static double price = 1.95;
 
 }

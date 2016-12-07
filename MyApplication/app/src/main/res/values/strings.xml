@@ -9,8 +9,6 @@
     <string name="phoneButton">Give us a call</string>
     <string name="locationButton">View on map</string>
     <string name="aboutUs">Our company Eddie-Bull Cupcakes has been around since late 2016. We specialize in strictly cupcakes, and currently have over 10 different cupcakes. Our signature being the Triple-Choco, which is our favourite as well! We just opened our first store in the cafeteria in St. Clair College. Stop buy a recieve a 10% student discount with a valid student card!</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cupsText">cup(s)</string>
     <string name="milkText">Milk</string>
