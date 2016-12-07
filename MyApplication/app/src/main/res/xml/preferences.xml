@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<ListPreference android:title="Dice Sides"-->
+        <!--android:summary="please select the number of sides on the dice"-->
+        <!--android:key="numDice"-->
+        <!--android:defaultValue="20"-->
+        <!--android:entries="@array/dice_sides"-->
+        <!--android:entryValues="@array/dice_sides_menu" />-->
+
+    <ListPreference
+        android:text="Hello World"
+        />
+</PreferenceScreen>
