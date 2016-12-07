@@ -16,11 +16,11 @@
         android:title="Cupcakes" />
         <item
             android:id="@+id/nav_pcalculator"
-            android:icon="@drawable/cupcake3"
+            android:icon="@drawable/cupcake2"
             android:title="Pricing Calculator" />
     <item
         android:id="@+id/nav_icalculator"
-        android:icon="@drawable/cupcake2"
+        android:icon="@drawable/cupcake3"
         android:title="Ingredients Calculator" />
     </group>
 
