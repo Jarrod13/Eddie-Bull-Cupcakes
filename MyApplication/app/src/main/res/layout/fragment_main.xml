@@ -44,27 +44,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/phoneButton"
-<<<<<<< HEAD
-        android:id="@+id/phoneButton"
-=======
         android:id="@+id/callUsMainButton"
->>>>>>> 9695420e034e906489e55bd2c0b591376f561716
         android:background="@color/buttonColour"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/buttonTextColour" />
+        android:textColor="@color/backgroundColour"
+        android:text="@string/callUsButton" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/locationButton"
-<<<<<<< HEAD
-        android:id="@+id/locationButton"
-=======
         android:id="@+id/locationMainButton"
->>>>>>> 9695420e034e906489e55bd2c0b591376f561716
         android:background="@color/buttonColour"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/buttonTextColour" />
+        android:textColor="@color/backgroundColour" />
 
 </LinearLayout>

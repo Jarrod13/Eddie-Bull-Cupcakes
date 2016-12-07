@@ -9,5 +9,8 @@ public class PeanutButterCup extends CupcakeCalculatorFragment {
         this.price = price;
     }
 
+    /**
+     * @param price is the price of this cupcake
+     */
     public static double price = 2.75;
 }
