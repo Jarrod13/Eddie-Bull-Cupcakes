@@ -3,7 +3,6 @@ package com.liamgoodwin.eddiebullcupcakes;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentTransaction;
@@ -14,8 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.FragmentTransaction;
 
+/**
+ * @author Dessert Due
+ * @version 1.0
+ * @date December 7th, 2016
+ */
 public class MainActivity extends AppCompatActivity
 
         implements OnNavigationItemSelectedListener,
@@ -31,7 +34,6 @@ public class MainActivity extends AppCompatActivity
         CupcakeCalculatorFragment.OnFragmentInteractionListener,
         MeetTheBakersFragment.OnFragmentInteractionListener,
         ContactUsFragment.OnFragmentInteractionListener {
-
 
         FragmentManager fm = getSupportFragmentManager();
 
@@ -90,7 +92,9 @@ public class MainActivity extends AppCompatActivity
           return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+    /**
+     * @param item is the item selected from the navigation drawer
+     */
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -128,11 +132,11 @@ public class MainActivity extends AppCompatActivity
             tran.replace(R.id.mainFrame, new IngredientsCalculatorFragment());
             tran.commit();
         }
-//        else if (id == R.id.nav_pcalculator) {
-//            FragmentTransaction tran = fm.beginTransaction();
-//            tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
-//            tran.commit();
-//        }
+        else if (id == R.id.nav_pcalculator) {
+            FragmentTransaction tran = fm.beginTransaction();
+            tran.replace(R.id.mainFrame, new CupcakeCalculatorFragment());
+            tran.commit();
+        }
         else if (id == R.id.nav_bakers) {
             FragmentTransaction tran = fm.beginTransaction();
             tran.replace(R.id.mainFrame, new MeetTheBakersFragment());

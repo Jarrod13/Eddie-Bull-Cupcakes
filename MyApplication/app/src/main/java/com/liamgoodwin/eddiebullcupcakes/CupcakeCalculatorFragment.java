@@ -9,20 +9,12 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link CupcakeCalculatorFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link CupcakeCalculatorFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * CupcakeCalculatorFragment is the Fragment as a whole for the pricing fragment
  */
 public class CupcakeCalculatorFragment extends Fragment {
     private View myFragmentView;
@@ -33,7 +25,6 @@ public class CupcakeCalculatorFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     public double totalPrice;
-    public double totalDiscount;
 
     public double rainbowSprinkleQuantity;
     public double tripleChocoQuantity;
@@ -47,23 +38,24 @@ public class CupcakeCalculatorFragment extends Fragment {
     public double peanutButterCupPrice;
     public double funfettiExplosionPrice;
 
-    EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleTextEdit);
-    EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoTextEdit);
-    EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceTextEdit);
-    EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupTextEdit);
-    EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionTextEdit);
+    public EditText rainbowSprinkleTextEdit = (EditText)myFragmentView.findViewById(R.id.rainbowSprinkleTextEdit);
+    public EditText tripleChocoTextEdit = (EditText)myFragmentView.findViewById(R.id.tripleChocoTextEdit);
+    public EditText pumpkinSpiceTextEdit = (EditText)myFragmentView.findViewById(R.id.pumpkinSpiceTextEdit);
+    public EditText peanutButterCupTextEdit = (EditText)myFragmentView.findViewById(R.id.peanutButterCupTextEdit);
+    public EditText funfettiExplosionTextEdit = (EditText)myFragmentView.findViewById(R.id.funfettiExplosionTextEdit);
 
-    final TextView rainbowSprinkleTotal = (TextView)myFragmentView.findViewById(R.id.rainbowSprinkleTotal);
-    final TextView tripleChocoTotal = (TextView)myFragmentView.findViewById(R.id.tripleChocoTotal);
-    final TextView pumpkinSpiceTotal = (TextView)myFragmentView.findViewById(R.id.pumpkinSpiceTotal);
-    final TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
-    final TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
+    public TextView rainbowSprinkleTotal = (TextView)myFragmentView.findViewById(R.id.rainbowSprinkleTotal);
+    public TextView tripleChocoTotal = (TextView)myFragmentView.findViewById(R.id.tripleChocoTotal);
+    public TextView pumpkinSpiceTotal = (TextView)myFragmentView.findViewById(R.id.pumpkinSpiceTotal);
+    public TextView peanutButterCupTotal = (TextView)myFragmentView.findViewById(R.id.peanutButterCupTotal);
+    public TextView funfettiExplosionTotal = (TextView)myFragmentView.findViewById(R.id.funfettiExplosionTotal);
 
-    final TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalTextView);
+    public TextView totalText = (TextView)myFragmentView.findViewById(R.id.totalTextView);
 
     private OnFragmentInteractionListener mListener;
 
     public CupcakeCalculatorFragment() {
+
     }
 
     /**
@@ -74,7 +66,6 @@ public class CupcakeCalculatorFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment CupcakeCalculatorFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static CupcakeCalculatorFragment newInstance(String param1, String param2) {
         CupcakeCalculatorFragment fragment = new CupcakeCalculatorFragment();
         Bundle args = new Bundle();
@@ -93,6 +84,12 @@ public class CupcakeCalculatorFragment extends Fragment {
         }
     }
 
+    /**
+     * OnCreateView sets and adds everything to the view
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
